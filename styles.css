@@ -1,0 +1,152 @@
+/* ---------- Color palette ---------- */
+
+:root {
+  --deep-blue: #17324d;
+  --cream: #f7f0df;
+  --paper: #fffaf0;
+  --olive: #6f7a3a;
+  --dark-olive: #4e5728;
+  --pink: #e7a0ad;
+  --yellow: #f2cf63;
+  --brown: #6b4a35;
+  --soft-pink: #f9e3e6;
+}
+
+/* ---------- Basic page setup ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--deep-blue);
+  background-color: var(--cream);
+  background-image:
+    linear-gradient(rgba(107, 74, 53, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 74, 53, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Introductory header ---------- */
+
+.site-header {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 5rem 0 3rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.4rem 0.75rem;
+  color: var(--deep-blue);
+  background: var(--pink);
+  border: 2px solid var(--deep-blue);
+  box-shadow: 4px 4px 0 var(--brown);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.08;
+}
+
+h1 {
+  max-width: 850px;
+  margin-bottom: 1.25rem;
+  color: var(--deep-blue);
+  font-size: clamp(2.75rem, 8vw, 6rem);
+  letter-spacing: -0.04em;
+}
+
+.introduction {
+  max-width: 680px;
+  margin: 0;
+  color: var(--brown);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+/* ---------- Weekly collection ---------- */
+
+main {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.week {
+  margin-bottom: 4rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  background: var(--paper);
+  border: 2px solid var(--deep-blue);
+  box-shadow: 10px 10px 0 var(--olive);
+}
+
+.week-heading {
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--deep-blue);
+}
+
+.week-number {
+  margin: 0 0 0.35rem;
+  color: var(--dark-olive);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.week-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.empty-state {
+  margin-top: 2rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: var(--soft-pink);
+  border: 2px dashed var(--brown);
+}
+
+.empty-state p {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0 0 3rem;
+  color: var(--brown);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 600px) {
+  .site-header {
+    padding-top: 3rem;
+  }
+
+  .week {
+    box-shadow: 6px 6px 0 var(--olive);
+  }
+}
