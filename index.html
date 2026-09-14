@@ -293,6 +293,9 @@
     <p class="collection-label">The collection begins</p>
 <nav
   class="week-navigation"
+  id="week-navigation"
+  aria-label="Screenshot collection weeks"
+>
   aria-label="Screenshot collection weeks"
 >
   <div class="week-nav-heading">
@@ -355,7 +358,18 @@
       </article>
     </section>
   </main>
-
+<nav
+  class="collection-footer-navigation"
+  aria-label="Return to week navigation"
+>
+  <a
+    class="collection-footer-button"
+    href="#week-navigation"
+  >
+    <span aria-hidden="true">↑</span>
+    Choose another week
+  </a>
+</nav>
   <footer class="site-footer">
     <p>More, More, More · An evolving twelve-week archive.</p>
   </footer>
