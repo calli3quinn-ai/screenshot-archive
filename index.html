@@ -291,7 +291,22 @@
   </div>
 </section>
     <p class="collection-label">The collection begins</p>
+<nav
+  class="week-navigation"
+  aria-label="Screenshot collection weeks"
+>
+  <div class="week-nav-heading">
+    <p>Browse the collection</p>
+    <span id="week-status" aria-live="polite"></span>
+  </div>
 
+  <div
+    class="week-tabs"
+    id="week-tabs"
+    role="tablist"
+    aria-label="Weeks with captures"
+  ></div>
+</nav>
     <section class="week" id="week-1">
       <header class="week-heading">
         <p class="week-number">Week 1</p>
@@ -377,6 +392,72 @@
 
   if (startingTab) {
     activateVisionTab(startingTab);
+  }
+</script>
+  <script>
+  const weekSections = Array.from(
+    document.querySelectorAll(".week")
+  );
+
+  const weekTabsContainer = document.querySelector("#week-tabs");
+  const weekStatus = document.querySelector("#week-status");
+
+  function showWeek(selectedIndex) {
+    const weekButtons = Array.from(
+      document.querySelectorAll(".week-tab")
+    );
+
+    weekSections.forEach((week, index) => {
+      const isSelected = index === selectedIndex;
+
+      week.hidden = !isSelected;
+      week.classList.toggle("is-active", isSelected);
+      week.setAttribute("aria-hidden", !isSelected);
+    });
+
+    weekButtons.forEach((button, index) => {
+      const isSelected = index === selectedIndex;
+
+      button.classList.toggle("is-active", isSelected);
+      button.setAttribute("aria-selected", isSelected);
+    });
+
+    const selectedWeek = weekSections[selectedIndex];
+    const selectedLabel = selectedWeek
+      .querySelector(".week-number")
+      .textContent.trim();
+
+    weekStatus.textContent = `Showing ${selectedLabel}`;
+  }
+
+  weekSections.forEach((week, index) => {
+    const label =
+      week.querySelector(".week-number")?.textContent.trim() ||
+      `Week ${index + 1}`;
+
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "week-tab";
+    button.textContent = label;
+    button.id = `week-tab-${index + 1}`;
+
+    button.setAttribute("role", "tab");
+    button.setAttribute("aria-selected", "false");
+    button.setAttribute("aria-controls", week.id);
+
+    week.setAttribute("role", "tabpanel");
+    week.setAttribute("aria-labelledby", button.id);
+
+    button.addEventListener("click", () => {
+      showWeek(index);
+    });
+
+    weekTabsContainer.appendChild(button);
+  });
+
+  if (weekSections.length > 0) {
+    showWeek(0);
   }
 </script>
 </body>
