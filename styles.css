@@ -521,3 +521,91 @@ main {
     transform: none;
   }
 }
+/* ---------- Tabbed vision statement ---------- */
+
+.vision-tabs {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 2rem;
+  padding: 0.35rem 0 0.85rem;
+  overflow-x: auto;
+  scrollbar-color: var(--olive) var(--cream);
+}
+
+.vision-tab {
+  flex: 0 0 auto;
+  padding: 0.75rem 1rem;
+  color: var(--deep-blue);
+  background: var(--cream);
+  border: 2px solid var(--deep-blue);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.vision-tab:hover {
+  background: var(--yellow);
+}
+
+.vision-tab.is-active {
+  color: var(--paper);
+  background: var(--deep-blue);
+  box-shadow: 4px 4px 0 var(--pink);
+  transform: translateY(-2px);
+}
+
+.vision-tab:focus-visible {
+  outline: 4px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.vision-tab-hint {
+  margin: 0.25rem 0 1.5rem;
+  color: var(--brown);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.vision-layout {
+  display: block;
+  margin-top: 0;
+  overflow: visible;
+}
+
+.vision-card {
+  display: none;
+  width: 100%;
+  max-width: 850px;
+  min-height: 0;
+  margin: 0 auto;
+  transform: none;
+}
+
+.vision-card.is-active {
+  display: block;
+  animation: reveal-vision-card 0.3s ease;
+}
+
+.vision-name,
+.vision-thesis,
+.vision-rule,
+.vision-plan,
+.vision-reader,
+.vision-guardrails {
+  grid-column: auto;
+  transform: none;
+}
+
+@keyframes reveal-vision-card {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
