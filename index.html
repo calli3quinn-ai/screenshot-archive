@@ -43,7 +43,75 @@
       Six ideas guide this twelve-week collection.
     </p>
   </header>
+<div
+  class="vision-tabs"
+  role="tablist"
+  aria-label="Vision statement sections"
+>
+  <button
+    class="vision-tab"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    data-vision-card="vision-name"
+  >
+    The Name
+  </button>
 
+  <button
+    class="vision-tab is-active"
+    type="button"
+    role="tab"
+    aria-selected="true"
+    data-vision-card="vision-thesis"
+  >
+    Thesis
+  </button>
+
+  <button
+    class="vision-tab"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    data-vision-card="vision-rule"
+  >
+    Capture Rule
+  </button>
+
+  <button
+    class="vision-tab"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    data-vision-card="vision-plan"
+  >
+    Process
+  </button>
+
+  <button
+    class="vision-tab"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    data-vision-card="vision-reader"
+  >
+    For the Reader
+  </button>
+
+  <button
+    class="vision-tab"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    data-vision-card="vision-guardrails"
+  >
+    Guardrails
+  </button>
+</div>
+
+<p class="vision-tab-hint">
+  Select a section to explore the vision behind the collection.
+</p>
   <div class="vision-layout">
     <article class="vision-card vision-name">
       <span class="card-number" aria-hidden="true">01</span>
@@ -59,7 +127,7 @@
       </p>
     </article>
 
-    <article class="vision-card vision-thesis">
+    <article class="vision-card vision-thesis is-active">
       <span class="card-number" aria-hidden="true">02</span>
 
       <p class="vision-card-label">The Central Idea</p>
@@ -276,5 +344,40 @@
   <footer class="site-footer">
     <p>More, More, More · An evolving twelve-week archive.</p>
   </footer>
+  <script>
+  const visionTabs = document.querySelectorAll(".vision-tab");
+  const visionCards = document.querySelectorAll(".vision-card");
+
+  function activateVisionTab(selectedTab) {
+    const selectedCard = selectedTab.dataset.visionCard;
+
+    visionTabs.forEach((tab) => {
+      const isSelected = tab === selectedTab;
+
+      tab.classList.toggle("is-active", isSelected);
+      tab.setAttribute("aria-selected", isSelected);
+    });
+
+    visionCards.forEach((card) => {
+      const isSelected = card.classList.contains(selectedCard);
+
+      card.classList.toggle("is-active", isSelected);
+      card.hidden = !isSelected;
+      card.setAttribute("aria-hidden", !isSelected);
+    });
+  }
+
+  visionTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      activateVisionTab(tab);
+    });
+  });
+
+  const startingTab = document.querySelector(".vision-tab.is-active");
+
+  if (startingTab) {
+    activateVisionTab(startingTab);
+  }
+</script>
 </body>
 </html>
