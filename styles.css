@@ -1128,3 +1128,21 @@ main {
     font-size: 0.72rem;
   }
 }
+/* ---------- Capture remark box ---------- */
+
+.annotation-remark {
+  width: 92%;
+  margin: 1rem 0 0 auto;
+  padding: 0.9rem 1rem;
+  color: var(--deep-blue);
+  background: var(--soft-pink);
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 var(--yellow);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.annotation-remark p {
+  margin: 0;
+}
