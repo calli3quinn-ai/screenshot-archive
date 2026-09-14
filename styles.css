@@ -609,3 +609,119 @@ main {
     transform: translateY(0);
   }
 }
+/* ---------- Playful vision tabs ---------- */
+
+.vision-tab {
+  --tab-background: var(--cream);
+
+  position: relative;
+  padding: 0.8rem 1.1rem;
+  color: var(--deep-blue);
+  background: var(--tab-background);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--deep-blue);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.vision-tab:nth-child(1) {
+  --tab-background: var(--yellow);
+  transform: rotate(-1deg);
+}
+
+.vision-tab:nth-child(2) {
+  --tab-background: var(--pink);
+  transform: rotate(0.6deg);
+}
+
+.vision-tab:nth-child(3) {
+  --tab-background: var(--olive);
+  color: var(--paper);
+  transform: rotate(-0.4deg);
+}
+
+.vision-tab:nth-child(4) {
+  --tab-background: var(--cream);
+  transform: rotate(0.8deg);
+}
+
+.vision-tab:nth-child(5) {
+  --tab-background: var(--soft-pink);
+  transform: rotate(-0.7deg);
+}
+
+.vision-tab:nth-child(6) {
+  --tab-background: var(--brown);
+  color: var(--paper);
+  transform: rotate(0.5deg);
+}
+
+.vision-tab:hover {
+  color: var(--deep-blue);
+  background: var(--tab-background);
+  box-shadow: 6px 6px 0 var(--brown);
+  filter: brightness(1.04);
+  transform: translateY(-4px) rotate(0);
+}
+
+.vision-tab:nth-child(3):hover,
+.vision-tab:nth-child(6):hover {
+  color: var(--paper);
+}
+
+.vision-tab.is-active,
+.vision-tab.is-active:hover {
+  color: var(--paper);
+  background: var(--deep-blue);
+  box-shadow: 5px 5px 0 var(--pink);
+  filter: none;
+  transform: translateY(-2px);
+  animation: tab-pop 300ms ease;
+}
+
+@keyframes tab-pop {
+  0% {
+    transform: translateY(0) scale(0.96);
+  }
+
+  65% {
+    transform: translateY(-5px) scale(1.04);
+  }
+
+  100% {
+    transform: translateY(-2px) scale(1);
+  }
+}
+
+/* ---------- Smaller vision heading ---------- */
+
+.vision-heading h2 {
+  max-width: 750px;
+  font-size: clamp(1.65rem, 3.4vw, 2.5rem);
+  line-height: 1.15;
+}
+
+/* ---------- Emphasized central thesis ---------- */
+
+.vision-pullquote {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  color: var(--deep-blue);
+  background: var(--pink);
+  border-left: 6px solid var(--olive);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vision-tab,
+  .vision-tab.is-active,
+  .vision-card.is-active {
+    transition: none;
+    animation: none;
+  }
+}
