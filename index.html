@@ -406,18 +406,66 @@
     activateVisionTab(startingTab);
   }
 </script>
-  <script>
+<script>
   const weekSections = Array.from(
     document.querySelectorAll(".week")
   );
 
   const weekTabsContainer = document.querySelector("#week-tabs");
   const weekStatus = document.querySelector("#week-status");
+  const weekButtons = [];
+
+  const allCapturesView = document.createElement("section");
+
+  allCapturesView.className = "all-captures-view";
+  allCapturesView.id = "all-captures";
+  allCapturesView.hidden = true;
+  allCapturesView.setAttribute("role", "tabpanel");
+  allCapturesView.setAttribute(
+    "aria-labelledby",
+    "all-captures-tab"
+  );
+
+  allCapturesView.innerHTML = `
+    <div class="all-captures-heading">
+      <p class="week-number">Collection view</p>
+      <h2>All Captures</h2>
+      <p>Choose a screenshot to open its full annotation.</p>
+    </div>
+
+    <div class="all-captures-grid"></div>
+  `;
+
+  if (weekSections.length > 0) {
+    weekSections[0].parentNode.insertBefore(
+      allCapturesView,
+      weekSections[0]
+    );
+  }
+
+  const allCapturesGrid = allCapturesView.querySelector(
+    ".all-captures-grid"
+  );
+
+  const allCapturesButton = document.createElement("button");
+
+  allCapturesButton.type = "button";
+  allCapturesButton.className = "week-tab";
+  allCapturesButton.textContent = "All Captures";
+  allCapturesButton.id = "all-captures-tab";
+
+  allCapturesButton.setAttribute("role", "tab");
+  allCapturesButton.setAttribute("aria-selected", "false");
+  allCapturesButton.setAttribute(
+    "aria-controls",
+    allCapturesView.id
+  );
+
+  weekTabsContainer.appendChild(allCapturesButton);
 
   function showWeek(selectedIndex) {
-    const weekButtons = Array.from(
-      document.querySelectorAll(".week-tab")
-    );
+    allCapturesView.hidden = true;
+    allCapturesView.setAttribute("aria-hidden", "true");
 
     weekSections.forEach((week, index) => {
       const isSelected = index === selectedIndex;
@@ -434,6 +482,9 @@
       button.setAttribute("aria-selected", isSelected);
     });
 
+    allCapturesButton.classList.remove("is-active");
+    allCapturesButton.setAttribute("aria-selected", "false");
+
     const selectedWeek = weekSections[selectedIndex];
     const selectedLabel = selectedWeek
       .querySelector(".week-number")
@@ -442,30 +493,106 @@
     weekStatus.textContent = `Showing ${selectedLabel}`;
   }
 
-  weekSections.forEach((week, index) => {
-    const label =
-      week.querySelector(".week-number")?.textContent.trim() ||
-      `Week ${index + 1}`;
-
-    const button = document.createElement("button");
-
-    button.type = "button";
-    button.className = "week-tab";
-    button.textContent = label;
-    button.id = `week-tab-${index + 1}`;
-
-    button.setAttribute("role", "tab");
-    button.setAttribute("aria-selected", "false");
-    button.setAttribute("aria-controls", week.id);
-
-    week.setAttribute("role", "tabpanel");
-    week.setAttribute("aria-labelledby", button.id);
-
-    button.addEventListener("click", () => {
-      showWeek(index);
+  function showAllCaptures() {
+    weekSections.forEach((week) => {
+      week.hidden = true;
+      week.classList.remove("is-active");
+      week.setAttribute("aria-hidden", "true");
     });
 
-    weekTabsContainer.appendChild(button);
+    weekButtons.forEach((button) => {
+      button.classList.remove("is-active");
+      button.setAttribute("aria-selected", "false");
+    });
+
+    allCapturesView.hidden = false;
+    allCapturesView.setAttribute("aria-hidden", "false");
+
+    allCapturesButton.classList.add("is-active");
+    allCapturesButton.setAttribute("aria-selected", "true");
+
+    weekStatus.textContent = "Showing all captures";
+  }
+
+  weekSections.forEach((week, weekIndex) => {
+    const weekLabel =
+      week.querySelector(".week-number")?.textContent.trim() ||
+      `Week ${weekIndex + 1}`;
+
+    const weekButton = document.createElement("button");
+
+    weekButton.type = "button";
+    weekButton.className = "week-tab";
+    weekButton.textContent = weekLabel;
+    weekButton.id = `week-tab-${weekIndex + 1}`;
+
+    weekButton.setAttribute("role", "tab");
+    weekButton.setAttribute("aria-selected", "false");
+    weekButton.setAttribute("aria-controls", week.id);
+
+    week.setAttribute("role", "tabpanel");
+    week.setAttribute("aria-labelledby", weekButton.id);
+
+    weekButton.addEventListener("click", () => {
+      showWeek(weekIndex);
+    });
+
+    weekButtons.push(weekButton);
+    weekTabsContainer.appendChild(weekButton);
+
+    const weekImages = Array.from(week.querySelectorAll("img"));
+
+    weekImages.forEach((image, captureIndex) => {
+      const capture =
+        image.closest(".capture") ||
+        image.closest("article");
+
+      const captureTitle =
+        capture?.querySelector("h3")?.textContent.trim() ||
+        `Capture ${captureIndex + 1}`;
+
+      const thumbnailButton =
+        document.createElement("button");
+
+      thumbnailButton.type = "button";
+      thumbnailButton.className = "capture-thumbnail";
+      thumbnailButton.setAttribute(
+        "aria-label",
+        `Open ${captureTitle} from ${weekLabel}`
+      );
+
+      const thumbnailImage = image.cloneNode(false);
+
+      thumbnailImage.className = "capture-thumbnail-image";
+      thumbnailImage.alt = "";
+      thumbnailImage.loading = "lazy";
+
+      const thumbnailLabel = document.createElement("span");
+
+      thumbnailLabel.className = "capture-thumbnail-label";
+      thumbnailLabel.textContent =
+        `${weekLabel} · ${captureTitle}`;
+
+      thumbnailButton.appendChild(thumbnailImage);
+      thumbnailButton.appendChild(thumbnailLabel);
+
+      thumbnailButton.addEventListener("click", () => {
+        showWeek(weekIndex);
+
+        window.setTimeout(() => {
+          image.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }, 0);
+      });
+
+      allCapturesGrid.appendChild(thumbnailButton);
+    });
+  });
+
+  allCapturesButton.addEventListener("click", () => {
+    showAllCaptures();
   });
 
   if (weekSections.length > 0) {
