@@ -845,3 +845,84 @@ main {
     animation: none;
   }
 }
+/* ---------- Matching week-selector design ---------- */
+
+.week-navigation {
+  color: var(--deep-blue);
+  background: var(--paper);
+  border: 2px solid var(--deep-blue);
+  box-shadow: 7px 7px 0 var(--olive);
+}
+
+#week-status {
+  color: var(--dark-olive);
+}
+
+.week-tab {
+  --week-button-color: var(--cream);
+
+  color: var(--deep-blue);
+  background: var(--week-button-color);
+  border: 2px solid var(--deep-blue);
+  box-shadow: 3px 3px 0 var(--brown);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.week-tab:nth-child(6n + 1) {
+  --week-button-color: var(--yellow);
+  transform: rotate(-1deg);
+}
+
+.week-tab:nth-child(6n + 2) {
+  --week-button-color: var(--pink);
+  transform: rotate(0.7deg);
+}
+
+.week-tab:nth-child(6n + 3) {
+  --week-button-color: var(--olive);
+  color: var(--paper);
+  transform: rotate(-0.5deg);
+}
+
+.week-tab:nth-child(6n + 4) {
+  --week-button-color: var(--cream);
+  transform: rotate(0.8deg);
+}
+
+.week-tab:nth-child(6n + 5) {
+  --week-button-color: var(--soft-pink);
+  transform: rotate(-0.7deg);
+}
+
+.week-tab:nth-child(6n + 6) {
+  --week-button-color: var(--brown);
+  color: var(--paper);
+  transform: rotate(0.5deg);
+}
+
+.week-tab:hover {
+  color: var(--deep-blue);
+  background: var(--week-button-color);
+  box-shadow: 6px 6px 0 var(--pink);
+  filter: brightness(1.04);
+  transform: translateY(-4px) rotate(0);
+}
+
+.week-tab:nth-child(6n + 3):hover,
+.week-tab:nth-child(6n + 6):hover {
+  color: var(--paper);
+}
+
+.week-tab.is-active,
+.week-tab.is-active:hover {
+  color: var(--paper);
+  background: var(--deep-blue);
+  border-color: var(--deep-blue);
+  box-shadow: 5px 5px 0 var(--pink);
+  filter: none;
+  transform: translateY(-2px);
+  animation: tab-pop 300ms ease;
+}
