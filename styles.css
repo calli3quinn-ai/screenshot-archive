@@ -926,3 +926,45 @@ main {
   transform: translateY(-2px);
   animation: tab-pop 300ms ease;
 }
+/* ---------- Compact collection bar ---------- */
+
+.week-navigation {
+  position: static;
+  top: auto;
+  margin-bottom: 2rem;
+  padding: 0.7rem 0.85rem;
+  box-shadow: 4px 4px 0 var(--olive);
+}
+
+.week-nav-heading {
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.week-nav-heading p {
+  font-size: 1rem;
+}
+
+#week-status {
+  font-size: 0.75rem;
+}
+
+.week-tabs {
+  gap: 0.45rem;
+  padding: 0;
+}
+
+.week-tab {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.78rem;
+  box-shadow: 2px 2px 0 var(--brown);
+}
+
+.week-tab:hover {
+  box-shadow: 4px 4px 0 var(--pink);
+}
+
+.week-tab.is-active,
+.week-tab.is-active:hover {
+  box-shadow: 3px 3px 0 var(--pink);
+}
