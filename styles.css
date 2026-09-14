@@ -725,3 +725,123 @@ main {
     animation: none;
   }
 }
+/* ---------- Week navigation ---------- */
+
+.week-navigation {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 10;
+  margin: 0 0 3rem;
+  padding: 1.25rem;
+  color: var(--paper);
+  background: var(--deep-blue);
+  border: 2px solid var(--deep-blue);
+  box-shadow: 7px 7px 0 var(--brown);
+}
+
+.week-nav-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.week-nav-heading p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+#week-status {
+  color: var(--yellow);
+  font-size: 0.85rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.week-tabs {
+  display: flex;
+  gap: 0.65rem;
+  padding: 0.2rem 0 0.45rem;
+  overflow-x: auto;
+}
+
+.week-tab {
+  flex: 0 0 auto;
+  padding: 0.65rem 1rem;
+  color: var(--paper);
+  background: transparent;
+  border: 2px solid var(--paper);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.week-tab:hover {
+  color: var(--deep-blue);
+  background: var(--pink);
+  transform: translateY(-2px);
+}
+
+.week-tab.is-active {
+  color: var(--deep-blue);
+  background: var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: 3px 3px 0 var(--pink);
+  transform: translateY(-2px);
+}
+
+.week-tab:focus-visible {
+  outline: 4px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.week[hidden] {
+  display: none;
+}
+
+.week.is-active {
+  animation: reveal-week 300ms ease;
+}
+
+@keyframes reveal-week {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .week-navigation {
+    top: 0.35rem;
+    padding: 1rem;
+  }
+
+  .week-nav-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .week-tab,
+  .week.is-active {
+    transition: none;
+    animation: none;
+  }
+}
