@@ -1146,3 +1146,17 @@ main {
 .annotation-remark p {
   margin: 0;
 }
+/* ---------- Creator byline ---------- */
+
+.site-byline {
+  margin: 1.25rem 0 0;
+  color: var(--dark-olive);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.site-byline span {
+  padding: 0 0.35rem;
+  color: var(--pink);
+}
