@@ -383,3 +383,141 @@ main {
     box-shadow: 7px 7px 0 var(--pink);
   }
 }
+/* ---------- Editorial vision board ---------- */
+
+.vision-intro {
+  max-width: 600px;
+  margin: 1rem 0 0;
+  color: var(--brown);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.vision-layout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 2rem;
+}
+
+.vision-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 2px solid var(--deep-blue);
+}
+
+.vision-card p {
+  position: relative;
+  margin-top: 0;
+}
+
+.vision-card p:last-child {
+  margin-bottom: 0;
+}
+
+.vision-card-label {
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vision-card h3 {
+  position: relative;
+  max-width: 600px;
+  margin: 0 0 1.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.08;
+}
+
+.card-number {
+  position: absolute;
+  top: -0.15em;
+  right: 0.08em;
+  color: rgba(23, 50, 77, 0.08);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.vision-name {
+  grid-column: span 4;
+  align-self: start;
+  background: var(--yellow);
+  box-shadow: 8px 8px 0 var(--brown);
+  transform: rotate(-0.5deg);
+}
+
+.vision-thesis {
+  grid-column: span 8;
+  background: var(--paper);
+  box-shadow: 8px 8px 0 var(--olive);
+}
+
+.vision-rule {
+  grid-column: span 7;
+  background: var(--soft-pink);
+  box-shadow: 8px 8px 0 var(--brown);
+}
+
+.vision-plan {
+  grid-column: span 5;
+  align-self: start;
+  background: var(--cream);
+  box-shadow: 8px 8px 0 var(--yellow);
+}
+
+.vision-reader {
+  grid-column: span 8;
+  background: var(--paper);
+  box-shadow: 8px 8px 0 var(--pink);
+}
+
+.vision-guardrails {
+  grid-column: span 4;
+  align-self: start;
+  color: var(--paper);
+  background: var(--deep-blue);
+  box-shadow: 8px 8px 0 var(--olive);
+}
+
+.vision-guardrails h3,
+.vision-guardrails .vision-card-label {
+  color: var(--paper);
+}
+
+.vision-guardrails .card-number {
+  color: rgba(255, 250, 240, 0.12);
+}
+
+.vision-pullquote {
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 1.5rem;
+  color: var(--paper);
+  background: var(--olive);
+  border-left: 7px solid var(--pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media (max-width: 850px) {
+  .vision-name,
+  .vision-thesis,
+  .vision-rule,
+  .vision-plan,
+  .vision-reader,
+  .vision-guardrails {
+    grid-column: 1 / -1;
+  }
+
+  .vision-name {
+    transform: none;
+  }
+}
