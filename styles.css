@@ -1131,16 +1131,16 @@ main {
 /* ---------- Capture remark box ---------- */
 
 .annotation-remark {
-  width: 92%;
+  width: 88%;
   margin: 1rem 0 0 auto;
-  padding: 0.9rem 1rem;
+  padding: 0.7rem 0.85rem;
   color: var(--deep-blue);
   background: var(--soft-pink);
   border: 2px solid var(--pink);
   border-radius: 14px;
   box-shadow: 3px 3px 0 var(--yellow);
-  font-size: 0.9rem;
-  line-height: 1.55;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .annotation-remark p {
