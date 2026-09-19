@@ -1363,3 +1363,71 @@ main {
     animation: none;
   }
 }
+/* ---------- Pop scrapbook page background ---------- */
+
+:root {
+  --purple: #8f6aaa;
+  --orange: #df8447;
+  --bright-pink: #ed7fa3;
+}
+
+body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(
+      circle at 6% 8%,
+      rgba(143, 106, 170, 0.2) 0 7rem,
+      transparent 7.2rem
+    ),
+    radial-gradient(
+      circle at 94% 22%,
+      rgba(223, 132, 71, 0.18) 0 9rem,
+      transparent 9.2rem
+    ),
+    radial-gradient(
+      circle at 8% 64%,
+      rgba(231, 160, 173, 0.22) 0 8rem,
+      transparent 8.2rem
+    ),
+    radial-gradient(
+      circle at 92% 84%,
+      rgba(111, 122, 58, 0.18) 0 10rem,
+      transparent 10.2rem
+    ),
+    linear-gradient(
+      135deg,
+      #fffaf0 0%,
+      var(--cream) 52%,
+      #f3e2d1 100%
+    );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 650px) {
+  body {
+    background-attachment: scroll;
+    background-image:
+      radial-gradient(
+        circle at 5% 6%,
+        rgba(143, 106, 170, 0.18) 0 4.5rem,
+        transparent 4.7rem
+      ),
+      radial-gradient(
+        circle at 96% 28%,
+        rgba(223, 132, 71, 0.16) 0 5.5rem,
+        transparent 5.7rem
+      ),
+      radial-gradient(
+        circle at 8% 72%,
+        rgba(231, 160, 173, 0.2) 0 5rem,
+        transparent 5.2rem
+      ),
+      linear-gradient(
+        135deg,
+        #fffaf0 0%,
+        var(--cream) 55%,
+        #f3e2d1 100%
+      );
+  }
+}
