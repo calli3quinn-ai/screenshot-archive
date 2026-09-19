@@ -109,5 +109,117 @@ window.collectionData = [
         remark: "I liked this because an ordinary, unverified account is speaking back to a verified influencer whose account is literally called “Virgi’s Views.” The original post turns tights into something classy women need to bring back, even though tights never disappeared. “Just wear your tights” may still sound like a command, but it does not carry the same power as the verified account trying to define a trend. Why refuse comfort simply because you assume other women are no longer doing it?"
       }
     ]
+  },
+
+  {
+    week: 2,
+    heading: "Wanting, Watching, and Judging",
+
+    captures: [
+      {
+        number: 1,
+        title: "Enough.",
+        platform: "Instagram",
+        account: "@drinksbywhitney",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-01.jpg",
+
+        alt: "Instagram carousel collage of Trader Joe’s seasonal coffee products surrounding words about everything needed to stop spending seven dollars on coffee.",
+
+        remark: "We do not need any of this. We do not need the $7 coffee, and we do not need a cart full of Trader Joe’s products to replace it. Buying all of these ingredients costs more than the drink the post claims to help us avoid. The promise of saving money becomes another excuse to purchase more. Enough."
+      },
+
+      {
+        number: 2,
+        title: "Normal Shouldn’t Be News",
+        platform: "Instagram",
+        account: "@amanda.hooper",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-02.jpg",
+
+        alt: "Instagram carousel slide featuring a pregnant Maya Rudolph beneath the words Celebrities having babies over 40 and Maya Rudolph, 41.",
+
+        remark: "Women’s bodies are treated like public information, and this post makes Maya Rudolph the face of women having children after 40. I appreciate that it may help normalize something that is no longer unheard of, but creating a celebrity category around it also sensationalizes it. Normalization should not require turning a woman’s pregnancy into a spectacle."
+      },
+
+      {
+        number: 3,
+        title: "Same Problems, New Technology",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-03.jpg",
+
+        alt: "Instagram post featuring Werner Herzog and a quote about artificial intelligence and storytelling, followed by a comment asking for more female directors on the list.",
+
+        remark: "This reminded me that even when we discuss a huge new issue like AI, we bring all of our older problems with us. Werner Herzog’s reputation gives his opinion authority, and the post presents established directors as the people we should trust to define AI’s place in storytelling. Then one comment asks where the women are. We are debating the future of creativity while still deciding whose voices count in the conversation."
+      },
+
+      {
+        number: 4,
+        title: "We Are Not Owed More",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-04.jpg",
+
+        alt: "TikTok screenshot containing a Michael Jackson family photograph, a search for Blanket Jackson, and a comment speculating about his children’s conception and resemblance.",
+
+        remark: "Part of More, More, More is about what we want and crave, and this comment shows that appetite becoming invasive. The existence of Prince, Paris, and Blanket is not an invitation for strangers to analyze their faces or speculate about IVF. They are Michael’s children, and it does not matter how they were conceived. His death does not give the public a right to keep searching for more pieces of him through their bodies and private lives."
+      },
+
+      {
+        number: 5,
+        title: "The Comparison Is the Point",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-05.jpg",
+
+        alt: "Instagram screenshot criticizing body checking above a quoted post that says Trend over she won and features a thin woman wearing a cropped gray shirt.",
+
+        remark: "The post seems designed to make people look at her body, think about it, and compare themselves to it. Her body becomes the standard everyone else is asked to measure themselves against. Even the criticism keeps her size at the center of the conversation. She may want the attention, but that does not make the comparison harmless."
+      },
+
+      {
+        number: 6,
+        title: "Hate as Entertainment",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-06.jpg",
+
+        alt: "TikTok screenshot of a woman in a cream sweater with a search for Jen Secret Lives of Mormon Wives and a comment saying the season made the viewer hate her more.",
+
+        remark: "Reality television turns a real person into a character and then encourages viewers to decide whether they love or hate her. An edited season cannot show an entire human being, but this commenter feels certain enough to announce that they hate her. More than 1,400 likes turn that cruelty into a shared opinion. The show gives people more to watch, more to judge, and more reasons to believe they know someone they have never met."
+      },
+
+      {
+        number: 7,
+        title: "You Are the Product",
+        platform: "TikTok",
+        account: "Hope Stengel",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-02/week-02-image-07.jpg",
+
+        alt: "TikTok screenshot of Hope Stengel admitting that she sometimes buys products from advertisements and clicks on them even when she does not make a purchase.",
+
+        remark: "This is not a special or unusual confession. We fall for ads because companies spend millions of dollars designing them to work. Every purchase, pause, and curious click teaches the platform what to show us next. There is no reason to be embarrassed for doing exactly what the market was designed to make us do. We are not immune. We are the audience, the information feeding the algorithm, and ultimately the product being sold."
+      }
+    ]
   }
 ];
