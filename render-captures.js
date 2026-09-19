@@ -15,7 +15,6 @@ function renderCapture(capture) {
   const platform = escapeHTML(capture.platform);
   const image = escapeHTML(capture.image);
   const alt = escapeHTML(capture.alt);
-  const record = escapeHTML(capture.record);
   const remark = escapeHTML(capture.remark);
 
   const sourceLink = capture.sourceUrl
@@ -64,7 +63,7 @@ function renderCapture(capture) {
 
         <h3>${title}</h3>
 
-        <p>${record}</p>
+        
 
         <div class="annotation-remark">
           <p>${remark}</p>
