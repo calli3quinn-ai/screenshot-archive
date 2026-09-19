@@ -1742,3 +1742,206 @@ body {
     font-size: 1.4rem;
   }
 }
+/* ---------- Scrapbook weekly collection ---------- */
+
+.week {
+  background: rgba(255, 250, 240, 0.96);
+  border: 3px solid var(--deep-blue);
+  border-radius: 30px 8px 30px 8px;
+  box-shadow:
+    10px 10px 0 var(--olive),
+    16px 16px 0 var(--purple);
+}
+
+.week-heading {
+  border-bottom: 4px dotted var(--bright-pink);
+}
+
+.week-number {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  color: var(--deep-blue);
+  background: var(--orange);
+  border: 2px solid var(--deep-blue);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--yellow);
+  transform: rotate(-1deg);
+}
+
+.week-heading h2 {
+  color: var(--purple);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  letter-spacing: -0.04em;
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+/* ---------- Polaroid-style screenshots ---------- */
+
+.screenshot-link {
+  position: relative;
+  padding: 1rem 1rem 1.25rem;
+  background: var(--paper);
+  border: 3px solid var(--deep-blue);
+  border-radius: 8px 24px 8px 24px;
+  box-shadow:
+    8px 8px 0 var(--purple),
+    13px 13px 0 var(--orange);
+  transform: rotate(-0.4deg);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.screenshot-link::before {
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  z-index: 2;
+  width: 5.5rem;
+  height: 1.45rem;
+  background: rgba(242, 207, 99, 0.9);
+  border: 1px solid rgba(107, 74, 53, 0.35);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.screenshot-link:hover {
+  box-shadow:
+    10px 10px 0 var(--bright-pink),
+    16px 16px 0 var(--olive);
+  transform: translateY(-5px) rotate(0.3deg);
+}
+
+.screenshot-link:focus-visible {
+  outline: 5px solid var(--yellow);
+  outline-offset: 5px;
+}
+
+.screenshot img {
+  border: 2px solid var(--brown);
+  border-radius: 4px;
+}
+
+.screenshot figcaption {
+  display: inline-block;
+  margin: 1.1rem 0 0 0.4rem;
+  padding: 0.35rem 0.7rem;
+  color: var(--deep-blue);
+  background: var(--bright-pink);
+  border: 2px solid var(--deep-blue);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--yellow);
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  transform: rotate(-1deg);
+}
+
+/* ---------- Celebrity-magazine annotations ---------- */
+
+.annotation {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background:
+    linear-gradient(
+      145deg,
+      var(--paper),
+      var(--soft-pink)
+    );
+  border: 3px solid var(--deep-blue);
+  border-radius: 24px 7px 24px 7px;
+  box-shadow:
+    7px 7px 0 var(--bright-pink),
+    12px 12px 0 var(--orange);
+  transform: rotate(0.6deg);
+}
+
+.annotation-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.65rem;
+  color: var(--paper);
+  background: var(--purple);
+  border: 2px solid var(--deep-blue);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--yellow);
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 0.72rem;
+  transform: rotate(-2deg);
+}
+
+.annotation h3 {
+  color: var(--deep-blue);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  font-size: clamp(1.6rem, 3.2vw, 2.35rem);
+  letter-spacing: -0.045em;
+  text-shadow: 2px 2px 0 var(--yellow);
+}
+
+.annotation-remark {
+  position: relative;
+  width: 92%;
+  margin: 1rem 0 0 auto;
+  padding: 1rem;
+  background: var(--soft-pink);
+  border: 3px solid var(--bright-pink);
+  border-radius: 8px 20px 8px 20px;
+  box-shadow: 5px 5px 0 var(--yellow);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  transform: rotate(-0.4deg);
+}
+
+.annotation-remark::before {
+  position: absolute;
+  top: -0.8rem;
+  left: -0.8rem;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  color: var(--paper);
+  background: var(--orange);
+  border: 2px solid var(--deep-blue);
+  border-radius: 50%;
+  content: "✦";
+  font-size: 0.9rem;
+  font-weight: 900;
+  transform: rotate(-10deg);
+}
+
+/* ---------- Small-screen capture adjustments ---------- */
+
+@media (max-width: 650px) {
+  .week {
+    box-shadow:
+      6px 6px 0 var(--olive),
+      10px 10px 0 var(--purple);
+  }
+
+  .screenshot-link {
+    box-shadow:
+      6px 6px 0 var(--purple),
+      10px 10px 0 var(--orange);
+    transform: none;
+  }
+
+  .annotation {
+    box-shadow:
+      6px 6px 0 var(--bright-pink),
+      10px 10px 0 var(--orange);
+    transform: none;
+  }
+
+  .annotation-remark {
+    width: 100%;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screenshot-link {
+    transition: none;
+  }
+}
