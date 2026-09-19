@@ -1945,3 +1945,161 @@ body {
     transition: none;
   }
 }
+/* ---------- Celebrity-blog gallery label ---------- */
+
+.collection-label {
+  color: var(--paper);
+  background: var(--purple);
+  border: 3px solid var(--deep-blue);
+  border-radius: 999px;
+  box-shadow:
+    4px 4px 0 var(--yellow),
+    7px 7px 0 var(--bright-pink);
+  font-family: "Arial Black", Arial, sans-serif;
+  transform: rotate(-1.5deg);
+}
+
+/* ---------- All Captures scrapbook gallery ---------- */
+
+.all-captures-view {
+  background:
+    linear-gradient(
+      140deg,
+      rgba(255, 250, 240, 0.98),
+      rgba(249, 227, 230, 0.94)
+    );
+  border: 3px solid var(--deep-blue);
+  border-radius: 30px 8px 30px 8px;
+  box-shadow:
+    9px 9px 0 var(--purple),
+    15px 15px 0 var(--orange);
+}
+
+.all-captures-heading {
+  padding-bottom: 1rem;
+  border-bottom: 4px dotted var(--bright-pink);
+}
+
+.all-captures-heading h2 {
+  color: var(--purple);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  letter-spacing: -0.04em;
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+.all-captures-grid {
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Mini magazine-clipping thumbnails ---------- */
+
+.capture-thumbnail {
+  position: relative;
+  padding: 0.7rem;
+  border: 3px solid var(--deep-blue);
+  border-radius: 7px 20px 7px 20px;
+  font-family: "Arial Black", Arial, sans-serif;
+}
+
+.capture-thumbnail:nth-child(4n + 1) {
+  color: var(--deep-blue);
+  background: var(--soft-pink);
+  box-shadow:
+    4px 4px 0 var(--orange),
+    7px 7px 0 var(--brown);
+  transform: rotate(-1deg);
+}
+
+.capture-thumbnail:nth-child(4n + 2) {
+  color: var(--deep-blue);
+  background: var(--yellow);
+  box-shadow:
+    4px 4px 0 var(--bright-pink),
+    7px 7px 0 var(--purple);
+  transform: rotate(0.8deg);
+}
+
+.capture-thumbnail:nth-child(4n + 3) {
+  color: var(--paper);
+  background: var(--purple);
+  box-shadow:
+    4px 4px 0 var(--orange),
+    7px 7px 0 var(--olive);
+  transform: rotate(-0.6deg);
+}
+
+.capture-thumbnail:nth-child(4n + 4) {
+  color: var(--deep-blue);
+  background: var(--orange);
+  box-shadow:
+    4px 4px 0 var(--yellow),
+    7px 7px 0 var(--brown);
+  transform: rotate(1deg);
+}
+
+.capture-thumbnail:hover {
+  color: var(--deep-blue);
+  background: var(--paper);
+  box-shadow:
+    6px 6px 0 var(--bright-pink),
+    10px 10px 0 var(--olive);
+  transform: translateY(-6px) rotate(0);
+}
+
+.capture-thumbnail-image {
+  border: 2px solid var(--deep-blue);
+  border-radius: 4px 12px 4px 12px;
+}
+
+.capture-thumbnail-label {
+  padding: 0.15rem;
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+/* ---------- Slightly clearer annotation text ---------- */
+
+.annotation-remark {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  line-height: 1.6;
+}
+
+/* ---------- Matching site footer ---------- */
+
+.site-footer {
+  margin: 2rem auto 3rem;
+  padding: 1rem 1.25rem;
+  color: var(--paper);
+  background: var(--deep-blue);
+  border: 3px solid var(--brown);
+  border-radius: 7px 22px 7px 22px;
+  box-shadow:
+    6px 6px 0 var(--orange),
+    10px 10px 0 var(--purple);
+  font-family: "Arial Black", Arial, sans-serif;
+  text-align: center;
+  transform: rotate(-0.3deg);
+}
+
+/* ---------- Small-screen gallery adjustments ---------- */
+
+@media (max-width: 650px) {
+  .all-captures-view {
+    box-shadow:
+      6px 6px 0 var(--purple),
+      10px 10px 0 var(--orange);
+  }
+
+  .capture-thumbnail {
+    border-radius: 6px 15px 6px 15px;
+  }
+
+  .site-footer {
+    width: min(100% - 1.5rem, 1100px);
+    box-shadow:
+      5px 5px 0 var(--orange),
+      8px 8px 0 var(--purple);
+    transform: none;
+  }
+}
