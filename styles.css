@@ -1431,3 +1431,314 @@ body {
       );
   }
 }
+/* ---------- Celebrity scrapbook vision area ---------- */
+
+.vision-statement {
+  position: relative;
+  overflow: visible;
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 250, 240, 0.97),
+      rgba(249, 227, 230, 0.92)
+    );
+  border: 3px solid var(--deep-blue);
+  border-radius: 28px 8px 28px 8px;
+  box-shadow:
+    12px 12px 0 var(--purple),
+    19px 19px 0 var(--orange);
+}
+
+.vision-statement::before {
+  position: absolute;
+  top: -1.5rem;
+  right: 2rem;
+  display: grid;
+  width: 3.75rem;
+  height: 3.75rem;
+  place-items: center;
+  color: var(--deep-blue);
+  background: var(--yellow);
+  border: 3px solid var(--deep-blue);
+  border-radius: 50%;
+  box-shadow: 5px 5px 0 var(--bright-pink);
+  content: "✦";
+  font-size: 1.8rem;
+  font-weight: 900;
+  transform: rotate(10deg);
+}
+
+.vision-heading {
+  border-bottom: 4px dotted var(--bright-pink);
+}
+
+.vision-label {
+  background: var(--orange);
+  border: 3px solid var(--deep-blue);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--yellow);
+  transform: rotate(-1.5deg);
+}
+
+.vision-heading h2 {
+  color: var(--purple);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  letter-spacing: -0.04em;
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+.vision-intro {
+  color: var(--brown);
+}
+
+/* ---------- Pop-style vision buttons ---------- */
+
+.vision-tabs {
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.vision-tab {
+  padding: 0.75rem 1.05rem;
+  border: 3px solid var(--deep-blue);
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--deep-blue);
+}
+
+.vision-tab:nth-child(1) {
+  --tab-background: var(--yellow);
+}
+
+.vision-tab:nth-child(2) {
+  --tab-background: var(--bright-pink);
+}
+
+.vision-tab:nth-child(3) {
+  --tab-background: var(--purple);
+  color: var(--paper);
+}
+
+.vision-tab:nth-child(4) {
+  --tab-background: var(--orange);
+}
+
+.vision-tab:nth-child(5) {
+  --tab-background: var(--olive);
+  color: var(--paper);
+}
+
+.vision-tab:nth-child(6) {
+  --tab-background: var(--brown);
+  color: var(--paper);
+}
+
+.vision-tab:hover {
+  color: var(--deep-blue);
+  background: var(--tab-background);
+  box-shadow:
+    5px 5px 0 var(--yellow),
+    8px 8px 0 var(--purple);
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+.vision-tab:nth-child(3):hover,
+.vision-tab:nth-child(5):hover,
+.vision-tab:nth-child(6):hover {
+  color: var(--paper);
+}
+
+.vision-tab.is-active,
+.vision-tab.is-active:hover {
+  color: var(--paper);
+  background: var(--deep-blue);
+  border-color: var(--deep-blue);
+  box-shadow:
+    5px 5px 0 var(--orange),
+    8px 8px 0 var(--bright-pink);
+  transform: translateY(-3px) rotate(1deg);
+}
+
+/* ---------- Scrapbook vision cards ---------- */
+
+.vision-card {
+  border: 3px solid var(--deep-blue);
+  border-radius: 22px 7px 22px 7px;
+}
+
+.vision-card h3 {
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.vision-name {
+  background: var(--yellow);
+  box-shadow: 8px 8px 0 var(--brown);
+}
+
+.vision-thesis {
+  background: var(--paper);
+  box-shadow: 8px 8px 0 var(--purple);
+}
+
+.vision-rule {
+  background: var(--soft-pink);
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.vision-plan {
+  background: var(--cream);
+  box-shadow: 8px 8px 0 var(--yellow);
+}
+
+.vision-reader {
+  background: var(--paper);
+  box-shadow: 8px 8px 0 var(--bright-pink);
+}
+
+.vision-guardrails {
+  color: var(--paper);
+  background: var(--deep-blue);
+  box-shadow: 8px 8px 0 var(--olive);
+}
+
+.vision-pullquote {
+  color: var(--paper);
+  background: var(--purple);
+  border: 3px solid var(--deep-blue);
+  border-left: 3px solid var(--deep-blue);
+  border-radius: 6px 22px 6px 22px;
+  box-shadow: 6px 6px 0 var(--orange);
+  transform: rotate(-0.5deg);
+}
+
+/* ---------- Matching collection navigation ---------- */
+
+.week-navigation {
+  background:
+    linear-gradient(
+      135deg,
+      var(--paper),
+      var(--soft-pink)
+    );
+  border: 3px solid var(--deep-blue);
+  border-radius: 20px 7px 20px 7px;
+  box-shadow:
+    7px 7px 0 var(--purple),
+    11px 11px 0 var(--orange);
+}
+
+.week-nav-heading p {
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+#week-status {
+  padding: 0.2rem 0.55rem;
+  color: var(--deep-blue);
+  background: var(--yellow);
+  border: 2px solid var(--deep-blue);
+  border-radius: 999px;
+}
+
+.week-tab {
+  border: 3px solid var(--deep-blue);
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 var(--deep-blue);
+}
+
+.week-tab:nth-child(6n + 1) {
+  --week-button-color: var(--bright-pink);
+}
+
+.week-tab:nth-child(6n + 2) {
+  --week-button-color: var(--yellow);
+}
+
+.week-tab:nth-child(6n + 3) {
+  --week-button-color: var(--purple);
+  color: var(--paper);
+}
+
+.week-tab:nth-child(6n + 4) {
+  --week-button-color: var(--orange);
+}
+
+.week-tab:nth-child(6n + 5) {
+  --week-button-color: var(--olive);
+  color: var(--paper);
+}
+
+.week-tab:nth-child(6n + 6) {
+  --week-button-color: var(--brown);
+  color: var(--paper);
+}
+
+.week-tab:hover {
+  color: var(--deep-blue);
+  background: var(--week-button-color);
+  box-shadow:
+    4px 4px 0 var(--yellow),
+    7px 7px 0 var(--purple);
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+.week-tab:nth-child(6n + 3):hover,
+.week-tab:nth-child(6n + 5):hover,
+.week-tab:nth-child(6n + 6):hover {
+  color: var(--paper);
+}
+
+.week-tab.is-active,
+.week-tab.is-active:hover {
+  color: var(--paper);
+  background: var(--deep-blue);
+  border-color: var(--deep-blue);
+  box-shadow:
+    4px 4px 0 var(--orange),
+    7px 7px 0 var(--bright-pink);
+  transform: translateY(-2px) rotate(1deg);
+}
+
+/* ---------- Matching bottom button ---------- */
+
+.collection-footer-button {
+  color: var(--deep-blue);
+  background: var(--orange);
+  border: 3px solid var(--deep-blue);
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow:
+    4px 4px 0 var(--yellow),
+    7px 7px 0 var(--purple);
+}
+
+.collection-footer-button:hover {
+  box-shadow:
+    5px 5px 0 var(--bright-pink),
+    9px 9px 0 var(--olive);
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+@media (max-width: 650px) {
+  .vision-statement {
+    box-shadow:
+      7px 7px 0 var(--purple),
+      11px 11px 0 var(--orange);
+  }
+
+  .vision-statement::before {
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+}
