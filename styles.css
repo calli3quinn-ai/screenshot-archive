@@ -2103,3 +2103,16 @@ body {
     transform: none;
   }
 }
+/* ---------- Seven captures per weekly row ---------- */
+
+@media (min-width: 901px) {
+  .all-captures-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 521px) and (max-width: 900px) {
+  .all-captures-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
