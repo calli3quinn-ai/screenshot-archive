@@ -395,7 +395,7 @@
       <p>Choose a screenshot to open its full annotation.</p>
     </div>
 
-    <div class="all-captures-grid"></div>
+    <div class="all-captures-groups"></div>
   `;
 
   if (weekSections.length > 0) {
@@ -405,8 +405,8 @@
     );
   }
 
-  const allCapturesGrid = allCapturesView.querySelector(
-    ".all-captures-grid"
+  const allCapturesGroups = allCapturesView.querySelector(
+    ".all-captures-groups"
   );
 
   const allCapturesButton = document.createElement("button");
@@ -481,6 +481,10 @@
       week.querySelector(".week-number")?.textContent.trim() ||
       `Week ${weekIndex + 1}`;
 
+    const weekHeading =
+      week.querySelector(".week-heading h2")?.textContent.trim() ||
+      `Week ${weekIndex + 1}`;
+
     const weekButton = document.createElement("button");
 
     weekButton.type = "button";
@@ -501,6 +505,40 @@
 
     weekButtons.push(weekButton);
     weekTabsContainer.appendChild(weekButton);
+
+    const weekGroup = document.createElement("section");
+
+    weekGroup.className = "all-captures-week";
+
+    const groupHeading = document.createElement("header");
+
+    groupHeading.className = "all-captures-week-heading";
+
+    const groupLabel = document.createElement("p");
+
+    groupLabel.className = "week-number";
+    groupLabel.textContent = weekLabel;
+
+    const groupTitle = document.createElement("h3");
+
+    groupTitle.id = `all-captures-week-${weekIndex + 1}`;
+    groupTitle.textContent = weekHeading;
+
+    weekGroup.setAttribute(
+      "aria-labelledby",
+      groupTitle.id
+    );
+
+    groupHeading.appendChild(groupLabel);
+    groupHeading.appendChild(groupTitle);
+
+    const weekGrid = document.createElement("div");
+
+    weekGrid.className = "all-captures-grid";
+
+    weekGroup.appendChild(groupHeading);
+    weekGroup.appendChild(weekGrid);
+    allCapturesGroups.appendChild(weekGroup);
 
     const weekImages = Array.from(week.querySelectorAll("img"));
 
@@ -532,8 +570,7 @@
       const thumbnailLabel = document.createElement("span");
 
       thumbnailLabel.className = "capture-thumbnail-label";
-      thumbnailLabel.textContent =
-        `${weekLabel} · ${captureTitle}`;
+      thumbnailLabel.textContent = captureTitle;
 
       thumbnailButton.appendChild(thumbnailImage);
       thumbnailButton.appendChild(thumbnailLabel);
@@ -549,7 +586,7 @@
         }, 0);
       });
 
-      allCapturesGrid.appendChild(thumbnailButton);
+      weekGrid.appendChild(thumbnailButton);
     });
   });
 
@@ -559,6 +596,8 @@
 
   if (weekSections.length > 0) {
     showWeek(0);
+  }
+</script>
   }
 </script>
 </body>
