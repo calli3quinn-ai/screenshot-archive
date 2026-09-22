@@ -2212,3 +2212,14 @@ body {
     border-radius: 18px 6px 18px 6px;
   }
 }
+/* ---------- More space between capture weeks ---------- */
+
+.all-captures-week + .all-captures-week {
+  margin-top: 2.75rem;
+}
+
+@media (max-width: 650px) {
+  .all-captures-week + .all-captures-week {
+    margin-top: 2rem;
+  }
+}
