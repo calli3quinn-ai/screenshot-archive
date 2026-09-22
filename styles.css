@@ -2223,3 +2223,43 @@ body {
     margin-top: 2rem;
   }
 }
+/* ---------- All Captures color palette ---------- */
+
+.all-captures-week {
+  --week-bg: #fffaf0;
+  --week-main: #6f7a3a;
+  --week-accent: #e7a0ad;
+
+  background: var(--week-bg);
+  box-shadow:
+    7px 7px 0 var(--week-main),
+    12px 12px 0 var(--week-accent);
+}
+
+.all-captures-week:nth-child(4n + 2) {
+  --week-bg: #f9e3e6;
+  --week-main: #8f6aaa;
+  --week-accent: #df8447;
+}
+
+.all-captures-week:nth-child(4n + 3) {
+  --week-bg: #f7f0df;
+  --week-main: #df8447;
+  --week-accent: #f2cf63;
+}
+
+.all-captures-week:nth-child(4n + 4) {
+  --week-bg: #f2ead7;
+  --week-main: #6b4a35;
+  --week-accent: #ed7fa3;
+}
+
+.all-captures-week-heading {
+  background: var(--week-main);
+  box-shadow: 4px 4px 0 var(--week-accent);
+}
+
+.all-captures-week-heading .week-number {
+  color: var(--deep-blue);
+  background: var(--week-accent);
+}
