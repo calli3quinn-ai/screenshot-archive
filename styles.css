@@ -2116,3 +2116,99 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+/* ---------- Y2K All Captures weekly rows ---------- */
+
+.all-captures-groups {
+  display: grid;
+  gap: 2.25rem;
+  margin-top: 1.75rem;
+}
+
+.all-captures-week {
+  --row-background: var(--soft-pink);
+  --row-shadow-one: var(--purple);
+  --row-shadow-two: var(--yellow);
+
+  padding: 1rem;
+  background: var(--row-background);
+  border: 3px solid var(--deep-blue);
+  border-radius: 8px 26px 8px 26px;
+  box-shadow:
+    7px 7px 0 var(--row-shadow-one),
+    12px 12px 0 var(--row-shadow-two);
+}
+
+.all-captures-week:nth-child(4n + 2) {
+  --row-background: var(--cream);
+  --row-shadow-one: var(--orange);
+  --row-shadow-two: var(--olive);
+}
+
+.all-captures-week:nth-child(4n + 3) {
+  --row-background: var(--paper);
+  --row-shadow-one: var(--bright-pink);
+  --row-shadow-two: var(--purple);
+}
+
+.all-captures-week:nth-child(4n + 4) {
+  --row-background: #f2ead7;
+  --row-shadow-one: var(--olive);
+  --row-shadow-two: var(--orange);
+}
+
+.all-captures-week-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.75rem;
+  color: var(--paper);
+  background: var(--deep-blue);
+  border: 3px solid var(--brown);
+  border-radius: 999px 16px 999px 16px;
+  box-shadow: 4px 4px 0 var(--bright-pink);
+}
+
+.all-captures-week-heading .week-number {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.all-captures-week-heading h3 {
+  margin: 0;
+  color: var(--paper);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.all-captures-week .all-captures-grid {
+  margin-top: 0;
+}
+
+@media (min-width: 901px) {
+  .all-captures-week .all-captures-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .all-captures-groups {
+    gap: 1.75rem;
+  }
+
+  .all-captures-week {
+    padding: 0.75rem;
+    box-shadow:
+      5px 5px 0 var(--row-shadow-one),
+      8px 8px 0 var(--row-shadow-two);
+  }
+
+  .all-captures-week-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.45rem;
+    border-radius: 18px 6px 18px 6px;
+  }
+}
