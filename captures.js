@@ -221,5 +221,27 @@ window.collectionData = [
         remark: "This is not a special or unusual confession. We fall for ads because companies spend millions of dollars designing them to work. Every purchase, pause, and curious click teaches the platform what to show us next. There is no reason to be embarrassed for doing exactly what the market was designed to make us do. We are not immune. We are the audience, the information feeding the algorithm, and ultimately the product being sold."
       }
     ]
+   },
+
+  {
+    week: 3,
+    heading: "Attention, Status, and Spectacle",
+
+    captures: [
+      {
+        number: 1,
+        title: "Nothing Casual About It",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-03/week-03-image-01.jpg",
+
+        alt: "Twitter post showing a text exchange about Ace Bailey at the 9/11 Memorial, with a grandfather referring to Bobby Orr as his friend.",
+
+        remark: "What bothered me is how quickly a message about someone who died on 9/11 became content. Maybe the grandfather was grieving, maybe he was flexing his connection to Bobby Orr, or maybe the person sharing the exchange wanted to look cool online. Once it reaches Twitter, strangers are invited to laugh at the grandfather’s wording, and Ace Bailey nearly disappears behind the name-drop. A horrible event becomes background material for attention, status, and a cheap joke. There is nothing casual about 9/11, and some things should not be turned into content."
+      }
+    ]
   }
 ];
