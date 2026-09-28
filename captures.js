@@ -223,25 +223,115 @@ window.collectionData = [
     ]
    },
 
-  {
-    week: 3,
-    heading: "Attention, Status, and Spectacle",
+ {
+  week: 3,
+  heading: "Attention, Status, and Spectacle",
 
-    captures: [
-      {
-        number: 1,
-       title: "In Life and Death, Fame Changes You",
-        platform: "Twitter/X",
-        account: "",
-        captureDate: "",
-        sourceUrl: "",
+  captures: [
+    {
+      number: 1,
+      title: "In Life and Death, Fame Changes You",
+      platform: "Twitter/X",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
 
-        image: "images/week-03/week-03-image-01.jpg",
+      image: "images/week-03/week-03-image-01.jpg",
 
-        alt: "Twitter post showing a text exchange about Ace Bailey at the 9/11 Memorial, with a grandfather referring to Bobby Orr as his friend.",
+      alt: "Twitter post showing a text exchange about Ace Bailey at the 9/11 Memorial, with a grandfather referring to Bobby Orr as his friend.",
 
-        remark: "Why is this even something we’re turning into content. What bothered me is how quickly a message about someone who died on 9/11 became content. Maybe the grandfather was grieving, maybe he was flexing his connection to Bobby Orr, or maybe the person sharing the exchange wanted to look cool online. Once it reaches Twitter, strangers are invited to laugh at the grandfather’s wording, and Ace Bailey nearly disappears behind the name-drop. A horrible event becomes background material for attention, status, and a cheap joke. There is nothing casual about 9/11, and some things should not be turned into content."
-      }
-    ]
-  }
+      remark: "Why is this even something we’re turning into content. What bothered me is how quickly a message about someone who died on 9/11 became content. Maybe the grandfather was grieving, maybe he was flexing his connection to Bobby Orr, or maybe the person sharing the exchange wanted to look cool online. Once it reaches Twitter, strangers are invited to laugh at the grandfather’s wording, and Ace Bailey nearly disappears behind the name-drop. A horrible event becomes background material for attention, status, and a cheap joke. There is nothing casual about 9/11, and some things should not be turned into content."
+    },
+
+    {
+      number: 2,
+      title: "They Were Never Trash",
+      platform: "Twitter/X",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
+
+      image: "images/week-03/week-03-image-02.jpg",
+
+      alt: "Twitter post describing Lana Del Rey’s stepchildren as Louisiana trash before their father married her.",
+
+      remark: "The kids look perfectly normal, so who are we to assume they were “Louisiana trash” before Lana Del Rey entered their lives? Their birthplace does not tell us who they are, and her fame does not make them more respectable or worthy. To them, she is a person who fell in love with their father, not a celebrity who rescued them from an inferior life. Even if strangers think this family looks “trashy,” we know nothing about them. Fame does not give us the right to classify an entire family as a before-and-after story."
+    },
+
+    {
+      number: 3,
+      title: "Selling It, Then Shaming It",
+      platform: "Instagram",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
+
+      image: "images/week-03/week-03-image-03.jpg",
+
+      alt: "Instagram post criticizing plastic rhinestones on objects, with a comment noting that the creator had recently worked with small beads and plastic.",
+
+      remark: "There is something completely tasteless about humiliating people for enjoying a trend when she was participating in nearly the same thing one post earlier. Once again, it is a woman judging other women for liking something harmless. This collection is not meant to shame people who enjoy or participate in trends. It is meant to notice when those trends are being force fed to us. Helping sell the trend and then turning around to shame the people who followed it is horrible."
+    },
+
+    {
+      number: 4,
+      title: "Commands on Top of Commands",
+      platform: "Instagram",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
+
+      image: "images/week-03/week-03-image-04.jpg",
+
+      alt: "Instagram photograph of a Wegovy advertisement altered with graffiti reading Say no to drugs, stay fat and sexy.",
+
+      remark: "What stopped me was the command written directly over another command. The advertisement sells a medication and the possibility of changing your body, while the graffiti responds by telling people to “stay fat & sexy.” GLP-1 medications have real medical uses, including diabetes treatment, but their popularity is also connected to a culture that punishes people for being fat. If someone actually chose to remain fat, that same culture would often judge them for it. The graffiti resists one instruction by replacing it with another, and I am not sure which voice is supposed to feel more freeing."
+    },
+
+    {
+      number: 5,
+      title: "Trad Is Not for Everyone",
+      platform: "Twitter/X",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
+
+      image: "images/week-03/week-03-image-05.jpg",
+
+      alt: "Twitter post reading Trad is so in right now above a family photograph, with a reply challenging its description of their lifestyle.",
+
+      remark: "“Trad” is a fad created and promoted by people who can afford to perform a simple lifestyle while still making millions of dollars. The people seeing these posts often cannot afford the dream being sold to them, and we should not be shamed for wanting a better life for those coming after us while being unable to financially secure it. Trad is not “in” for everyone. It is in for the ultra wealthy. If the one percent wants traditional living to come back, then make living affordable again."
+    },
+
+    {
+      number: 6,
+      title: "What Is Gump?",
+      platform: "Twitter/X",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
+
+      image: "images/week-03/week-03-image-06.jpg",
+
+      alt: "Twitter screenshot of a sponsored Speks advertisement saying Meetings suck, but Gump helps, with a reply asking what the advertisement is selling.",
+
+      remark: "What is even happening? What is Gump, and what are they actually trying to sell? I appreciated that the person posting this admitted they did not understand it, because so many people pretend to understand confusing trends just to seem like they are in on the joke. Selling a fidget toy as some mysterious solution to meetings feels especially strange when neurodivergent behaviors are still shamed in so many workplaces. The same tools that could support people with ADHD or autism are repackaged as quirky productivity products without acknowledging why someone might genuinely need them. Gump does not make sense, but the advertisement expects us to want it anyway."
+    },
+
+    {
+      number: 7,
+      title: "You Probably Won’t Use It",
+      platform: "Instagram",
+      account: "",
+      captureDate: "",
+      sourceUrl: "",
+
+      image: "images/week-03/week-03-image-07.jpg",
+
+      alt: "Instagram graphic encouraging viewers to buy full-size products rather than minis because they will use them anyway, featuring Bum Bum Cream and Chanel perfume.",
+
+      remark: "“You’ll use it anyway” is exactly the problem because most people probably will not. A $300 full-size perfume is not practical when people are struggling to afford gas and groceries, and buying more does not save money if the product sits unused. Get the mini, ask for it for your birthday, wait for a discount, or simply do not buy it. Stop presenting luxury products as necessities and pretending that purchasing the biggest size is the responsible choice. We do not need these things, and pressuring people to act as though we do is ridiculous."
+    }
+  ]
+}
 ];
