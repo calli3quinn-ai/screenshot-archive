@@ -2263,3 +2263,116 @@ body {
   color: var(--deep-blue);
   background: var(--week-accent);
 }
+/* ---------- Start Here reader guide ---------- */
+
+.reader-guide {
+  position: relative;
+  margin: 2rem auto;
+  padding: 1.25rem;
+  color: var(--deep-blue);
+  background: var(--paper);
+  border: 3px solid var(--deep-blue);
+  border-radius: 8px 28px 8px 28px;
+  box-shadow:
+    7px 7px 0 var(--olive),
+    12px 12px 0 var(--bright-pink);
+}
+
+.reader-guide::after {
+  content: "★";
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  color: var(--yellow);
+  font-size: 2rem;
+  text-shadow: 2px 2px 0 var(--deep-blue);
+  transform: rotate(12deg);
+}
+
+.reader-guide-label {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.35rem 0.75rem;
+  color: var(--paper);
+  background: var(--orange);
+  border: 2px solid var(--deep-blue);
+  border-radius: 999px;
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 var(--yellow);
+}
+
+.reader-guide h2 {
+  margin: 0 0 0.5rem;
+  color: var(--purple);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  letter-spacing: -0.04em;
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+.reader-guide > p:not(.reader-guide-label) {
+  max-width: 48rem;
+  margin: 0 0 1rem;
+  color: var(--brown);
+  font-weight: 700;
+}
+
+.reader-guide ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: guide-question;
+}
+
+.reader-guide li {
+  position: relative;
+  min-height: 5rem;
+  padding: 0.9rem 0.8rem 0.9rem 3rem;
+  background: var(--soft-pink);
+  border: 2px solid var(--deep-blue);
+  border-radius: 6px 18px 6px 18px;
+  box-shadow: 4px 4px 0 var(--orange);
+  counter-increment: guide-question;
+}
+
+.reader-guide li:nth-child(2) {
+  background: var(--yellow);
+  box-shadow: 4px 4px 0 var(--purple);
+}
+
+.reader-guide li:nth-child(3) {
+  background: var(--cream);
+  box-shadow: 4px 4px 0 var(--olive);
+}
+
+.reader-guide li::before {
+  content: counter(guide-question);
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: grid;
+  width: 1.7rem;
+  height: 1.7rem;
+  place-items: center;
+  color: var(--paper);
+  background: var(--deep-blue);
+  border-radius: 50%;
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+}
+
+@media (max-width: 700px) {
+  .reader-guide ol {
+    grid-template-columns: 1fr;
+  }
+
+  .reader-guide {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
