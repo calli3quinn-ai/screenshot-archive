@@ -230,7 +230,7 @@ window.collectionData = [
     captures: [
       {
         number: 1,
-        title: "Nothing Casual About It",
+       title: "In Life and Death, Fame Changes You",
         platform: "Twitter/X",
         account: "",
         captureDate: "",
