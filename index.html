@@ -12,615 +12,681 @@
   <title>More, More, More</title>
 
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .enough-pause {
+      box-sizing: border-box;
+      width: calc(100% - 2rem);
+      max-width: 42rem;
+      margin: 3rem auto 2rem;
+      text-align: center;
+    }
+
+    .enough-pause__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.75rem 1.4rem;
+      border: 2px solid #21314b;
+      border-radius: 999px;
+      background: #efb8c8;
+      color: #21314b;
+      font: inherit;
+      font-weight: 700;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    .enough-pause__button:hover {
+      background: #f6cfda;
+    }
+
+    .enough-pause__button:focus-visible {
+      outline: 3px solid #21314b;
+      outline-offset: 4px;
+    }
+
+    .enough-pause__message {
+      margin-top: 1.25rem;
+      padding: 1.5rem;
+      border: 1px solid #21314b;
+      border-radius: 1rem;
+      background: #fff8ed;
+      color: #21314b;
+      line-height: 1.7;
+    }
+
+    .enough-pause__message[hidden] {
+      display: none;
+    }
+
+    .enough-pause__message p {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
-<header class="site-header">
-  <p class="eyebrow">A twelve-week digital exhibit</p>
+  <header class="site-header">
+    <p class="eyebrow">A twelve-week digital exhibit</p>
 
-  <h1>
-    <span>More,</span>
-    <span>More,</span>
-    <span>More</span>
-  </h1>
+    <h1>
+      <span>More,</span>
+      <span>More,</span>
+      <span>More</span>
+    </h1>
 
-  <p class="introduction">
-    A collection of the messages that tell us what to want, what to need,
-    what to think, and what to do.
-  </p>
+    <p class="introduction">
+      A collection of the messages that tell us what to want, what to need,
+      what to think, and what to do.
+    </p>
 
-  <p class="site-byline">
-    Collected and annotated by Callie Quinn
-    <span aria-hidden="true">·</span>
-    Fall 2026
-  </p>
-</header>
+    <p class="site-byline">
+      Collected and annotated by Callie Quinn
+      <span aria-hidden="true">·</span>
+      Fall 2026
+    </p>
+  </header>
 
   <main>
     <section class="vision-statement" id="vision">
-  <header class="vision-heading">
-    <p class="vision-label">Vision Statement</p>
+      <header class="vision-heading">
+        <p class="vision-label">Vision Statement</p>
 
-    <h2>
-      What happens when every suggestion starts to feel like a rule?
-    </h2>
+        <h2>
+          What happens when every suggestion starts to feel like a rule?
+        </h2>
 
-    <p class="vision-intro">
-      Six ideas guide this twelve-week collection.
-    </p>
-  </header>
-<div
- <div
-  class="vision-tabs"
-  role="tablist"
-  aria-label="Vision statement sections"
->
-  <button
-    class="vision-tab"
-    type="button"
-    role="tab"
-    aria-selected="false"
-    data-vision-card="vision-name"
-  >
-    01 · Why “More”?
-  </button>
+        <p class="vision-intro">
+          Six ideas guide this twelve-week collection.
+        </p>
+      </header>
 
-  <button
-    class="vision-tab is-active"
-    type="button"
-    role="tab"
-    aria-selected="true"
-    data-vision-card="vision-thesis"
-  >
-    02 · The Big Idea
-  </button>
+      <div
+        class="vision-tabs"
+        role="tablist"
+        aria-label="Vision statement sections"
+      >
+        <button
+          class="vision-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-vision-card="vision-name"
+        >
+          01 · Why “More”?
+        </button>
 
-  <button
-    class="vision-tab"
-    type="button"
-    role="tab"
-    aria-selected="false"
-    data-vision-card="vision-rule"
-  >
-    03 · What Counts?
-  </button>
+        <button
+          class="vision-tab is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-vision-card="vision-thesis"
+        >
+          02 · The Big Idea
+        </button>
 
-  <button
-    class="vision-tab"
-    type="button"
-    role="tab"
-    aria-selected="false"
-    data-vision-card="vision-plan"
-  >
-    04 · The Routine
-  </button>
+        <button
+          class="vision-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-vision-card="vision-rule"
+        >
+          03 · What Counts?
+        </button>
 
-  <button
-    class="vision-tab"
-    type="button"
-    role="tab"
-    aria-selected="false"
-    data-vision-card="vision-reader"
-  >
-    05 · What to Notice
-  </button>
+        <button
+          class="vision-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-vision-card="vision-plan"
+        >
+          04 · The Routine
+        </button>
 
-  <button
-    class="vision-tab"
-    type="button"
-    role="tab"
-    aria-selected="false"
-    data-vision-card="vision-guardrails"
-  >
-    06 · The Boundaries
-  </button>
-</div>
+        <button
+          class="vision-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-vision-card="vision-reader"
+        >
+          05 · What to Notice
+        </button>
+
+        <button
+          class="vision-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-vision-card="vision-guardrails"
+        >
+          06 · The Boundaries
+        </button>
+      </div>
+
       <p class="vision-tab-hint">
-  Select a section to explore the vision behind the collection.
-</p>
-  <div class="vision-layout">
-    <article class="vision-card vision-name">
-      <span class="card-number" aria-hidden="true">01</span>
-
-      <p class="vision-card-label">The Name</p>
-
-      <h3>More, More, More</h3>
-
-      <p>
-        The title reflects the pressure to keep up and become a better
-        version of ourselves, even when that improvement comes with
-        instructions to follow everyone else.
-      </p>
-    </article>
-
-    <article class="vision-card vision-thesis is-active">
-      <span class="card-number" aria-hidden="true">02</span>
-
-      <p class="vision-card-label">The Central Idea</p>
-
-      <h3>Improvement, according to whom?</h3>
-
-      <p>
-        My idea began with the unnecessary things celebrities and
-        influencers try to convince us to buy. As I thought more about
-        the project, I realized I was interested in the wider set of
-        instructions attached to this content: what we should want, how
-        we should live, and even what we should think.
+        Select a section to explore the vision behind the collection.
       </p>
 
-      <p>
-        Posts about AI fit when they tell us which tools we need to keep
-        up or encourage us to let those tools decide what to say or do.
-        What connects these subjects is the expectation that someone
-        else can tell us what a better version of ourselves should look
-        like.
-      </p>
+      <div class="vision-layout">
+        <article class="vision-card vision-name">
+          <span class="card-number" aria-hidden="true">01</span>
+          <p class="vision-card-label">The Name</p>
+          <h3>More, More, More</h3>
 
-      <blockquote class="vision-pullquote">
-        Content promising to help us improve ourselves often encourages
-        us to rely on someone else’s judgment.
-      </blockquote>
+          <p>
+            The title reflects the pressure to keep up and become a better
+            version of ourselves, even when that improvement comes with
+            instructions to follow everyone else.
+          </p>
+        </article>
 
-      <p>
-        Something we had no use for can become a supposed necessity, and
-        following a trend can start to feel like the only way to keep up.
-        What interests me is where a suggestion starts to feel like a
-        rule for living.
-      </p>
+        <article class="vision-card vision-thesis is-active">
+          <span class="card-number" aria-hidden="true">02</span>
+          <p class="vision-card-label">The Central Idea</p>
+          <h3>Improvement, according to whom?</h3>
 
-      <p>
-        I want to examine the tension between being told to become more
-        capable and being encouraged to question less. Across twelve
-        weeks, I will look for that pattern while also including posts
-        that encourage disagreement, independent choices, or
-        satisfaction with what we already have.
-      </p>
-    </article>
+          <p>
+            My idea began with the unnecessary things celebrities and
+            influencers try to convince us to buy. As I thought more about
+            the project, I realized I was interested in the wider set of
+            instructions attached to this content: what we should want, how
+            we should live, and even what we should think.
+          </p>
 
-    <article class="vision-card vision-rule">
-      <span class="card-number" aria-hidden="true">03</span>
+          <p>
+            Posts about AI fit when they tell us which tools we need to keep
+            up or encourage us to let those tools decide what to say or do.
+            What connects these subjects is the expectation that someone
+            else can tell us what a better version of ourselves should look
+            like.
+          </p>
 
-      <p class="vision-card-label">The Capture Rule</p>
+          <blockquote class="vision-pullquote">
+            Content promising to help us improve ourselves often encourages
+            us to rely on someone else’s judgment.
+          </blockquote>
 
-      <h3>What belongs in the collection?</h3>
+          <p>
+            Something we had no use for can become a supposed necessity, and
+            following a trend can start to feel like the only way to keep up.
+            What interests me is where a suggestion starts to feel like a
+            rule for living.
+          </p>
 
-      <p>
-        Each day, I will capture one public post involving celebrity
-        culture, influencer culture, or AI that tells people what to
-        want, need, think, or do, or challenges those instructions.
-      </p>
+          <p>
+            I want to examine the tension between being told to become more
+            capable and being encouraged to question less. Across twelve
+            weeks, I will look for that pattern while also including posts
+            that encourage disagreement, independent choices, or
+            satisfaction with what we already have.
+          </p>
+        </article>
 
-      <p>
-        To qualify, a post must contain an identifiable direction or
-        expectation in its wording, caption, or visual instructions.
-        Examples include a “must have” product, advice to copy a
-        celebrity’s lifestyle, claims about what everyone should
-        believe, or encouragement to let AI make a decision.
-      </p>
+        <article class="vision-card vision-rule">
+          <span class="card-number" aria-hidden="true">03</span>
+          <p class="vision-card-label">The Capture Rule</p>
+          <h3>What belongs in the collection?</h3>
 
-      <p>
-        Straight celebrity news, an ordinary photograph, or a technical
-        AI update without that message will not count. A post that only
-        makes a lifestyle look appealing will qualify if I can identify
-        a cue establishing an expectation, such as “habits of successful
-        people” or “everyone needs this.” An attractive image alone will
-        not qualify.
-      </p>
-    </article>
+          <p>
+            Each day, I will capture one public post involving celebrity
+            culture, influencer culture, or AI that tells people what to
+            want, need, think, or do, or challenges those instructions.
+          </p>
 
-    <article class="vision-card vision-plan">
-      <span class="card-number" aria-hidden="true">04</span>
+          <p>
+            To qualify, a post must contain an identifiable direction or
+            expectation in its wording, caption, or visual instructions.
+            Examples include a “must have” product, advice to copy a
+            celebrity’s lifestyle, claims about what everyone should
+            believe, or encouragement to let AI make a decision.
+          </p>
 
-      <p class="vision-card-label">The Process</p>
+          <p>
+            Straight celebrity news, an ordinary photograph, or a technical
+            AI update without that message will not count. A post that only
+            makes a lifestyle look appealing will qualify if I can identify
+            a cue establishing an expectation, such as “habits of successful
+            people” or “everyone needs this.” An attractive image alone will
+            not qualify.
+          </p>
+        </article>
 
-      <h3>How I will capture it</h3>
+        <article class="vision-card vision-plan">
+          <span class="card-number" aria-hidden="true">04</span>
+          <p class="vision-card-label">The Process</p>
+          <h3>How I will capture it</h3>
 
-      <p>
-        I will look on TikTok and Instagram for public posts, Reels, and
-        advertisements involving these subjects. I often scroll online
-        early in the morning, then mid-afternoon, and finally after
-        10:00 p.m.
-      </p>
+          <p>
+            I will look on TikTok and Instagram for public posts, Reels, and
+            advertisements involving these subjects. I often scroll online
+            early in the morning, then mid-afternoon, and finally after
+            10:00 p.m.
+          </p>
 
-      <p>
-        I will take the first qualifying post I encounter. If needed, I
-        will search terms such as “must haves,” “successful habits,” or
-        “AI productivity,” noting when a capture comes from a search.
-      </p>
+          <p>
+            I will take the first qualifying post I encounter. If needed, I
+            will search terms such as “must haves,” “successful habits,” or
+            “AI productivity,” noting when a capture comes from a search.
+          </p>
 
-      <p>
-        I will save each screenshot and record the account, platform,
-        link, and a sentence identifying its message. I will upload
-        captures and fuller annotations twice a week. If I miss a day, I
-        will record the gap and reason, then take an additional capture
-        the next day using its actual date.
-      </p>
-    </article>
+          <p>
+            I will save each screenshot and record the account, platform,
+            link, and a sentence identifying its message. I will upload
+            captures and fuller annotations twice a week. If I miss a day, I
+            will record the gap and reason, then take an additional capture
+            the next day using its actual date.
+          </p>
+        </article>
 
-    <article class="vision-card vision-reader">
-      <span class="card-number" aria-hidden="true">05</span>
+        <article class="vision-card vision-reader">
+          <span class="card-number" aria-hidden="true">05</span>
+          <p class="vision-card-label">For the Reader</p>
+          <h3>Notice the directions hiding in the feed</h3>
 
-      <p class="vision-card-label">For the Reader</p>
+          <p>
+            By December, I want a reader to notice how much of an ordinary
+            feed is made up of directions. Some are obvious, like being told
+            to buy something. Others are wrapped in encouragement,
+            entertainment, or promises to make life easier.
+          </p>
 
-      <h3>Notice the directions hiding in the feed</h3>
+          <p>
+            Seeing them together should make the repetition more noticeable,
+            along with the ways fame, popularity, and claims about
+            technology are used to make advice seem trustworthy. My
+            annotations will identify the instruction and what it promises,
+            whether that is acceptance, success, convenience, or a better
+            appearance.
+          </p>
 
-      <p>
-        By December, I want a reader to notice how much of an ordinary
-        feed is made up of directions. Some are obvious, like being told
-        to buy something. Others are wrapped in encouragement,
-        entertainment, or promises to make life easier.
-      </p>
+          <p>
+            I hope readers leave more aware of when advice helps them make a
+            choice and when it pressures them to follow along. I want them to
+            consider how they can be encouraged to constantly improve
+            themselves while also being encouraged to let others decide what
+            improvement should look like.
+          </p>
+        </article>
 
-      <p>
-        Seeing them together should make the repetition more noticeable,
-        along with the ways fame, popularity, and claims about
-        technology are used to make advice seem trustworthy. My
-        annotations will identify the instruction and what it promises,
-        whether that is acceptance, success, convenience, or a better
-        appearance.
-      </p>
+        <article class="vision-card vision-guardrails">
+          <span class="card-number" aria-hidden="true">06</span>
+          <p class="vision-card-label">Guardrails</p>
+          <h3>Public, purposeful, and fair</h3>
 
-      <p>
-        I hope readers leave more aware of when advice helps them make a
-        choice and when it pressures them to follow along. I want them to
-        consider how they can be encouraged to constantly improve
-        themselves while also being encouraged to let others decide what
-        improvement should look like.
-      </p>
-    </article>
+          <p>
+            I will use only publicly available content and will not include
+            private messages, restricted account posts, or another person’s
+            private communication.
+          </p>
 
-    <article class="vision-card vision-guardrails">
-      <span class="card-number" aria-hidden="true">06</span>
+          <p>
+            I will crop out unrelated notifications and identifying details
+            from ordinary users’ comments. I will only include material I am
+            comfortable showing this class.
+          </p>
 
-      <p class="vision-card-label">Guardrails</p>
-
-      <h3>Public, purposeful, and fair</h3>
-
-      <p>
-        I will use only publicly available content and will not include
-        private messages, restricted account posts, or another person’s
-        private communication.
-      </p>
-
-      <p>
-        I will crop out unrelated notifications and identifying details
-        from ordinary users’ comments. I will only include material I am
-        comfortable showing this class.
-      </p>
-
-      <p>
-        My annotations will address what a post communicates without
-        personal attacks or unsupported assumptions about its creator’s
-        intentions.
-      </p>
-    </article>
-  </div>
-</section>
+          <p>
+            My annotations will address what a post communicates without
+            personal attacks or unsupported assumptions about its creator’s
+            intentions.
+          </p>
+        </article>
+      </div>
     </section>
 
-<aside
-  class="reader-guide"
-  aria-labelledby="reader-guide-title"
->
-  <p class="reader-guide-label">New here?</p>
+    <aside class="reader-guide" aria-labelledby="reader-guide-title">
+      <p class="reader-guide-label">New here?</p>
 
-  <h2 id="reader-guide-title">Start Here!</h2>
+      <h2 id="reader-guide-title">Start Here!</h2>
 
-  <p>
-    You do not need to recognize every creator, celebrity, or trend.
-    Use these three questions as you move through the collection:
-  </p>
+      <p>
+        You do not need to recognize every creator, celebrity, or trend.
+        Use these three questions as you move through the collection:
+      </p>
 
-  <ol>
-    <li>Who is being treated as the authority?</li>
-    <li>What expectation is being created?</li>
-    <li>What would it mean to decide that we already have enough?</li>
-  </ol>
-</aside>
+      <ol>
+        <li>Who is being treated as the authority?</li>
+        <li>What expectation is being created?</li>
+        <li>What would it mean to decide that we already have enough?</li>
+      </ol>
+    </aside>
 
-<p class="collection-label">The collection begins</p>
-<nav
-  class="week-navigation"
-  id="week-navigation"
-  aria-label="Screenshot collection weeks"
->
-  <div class="week-nav-heading">
-    <p>Browse the collection</p>
-    <span id="week-status" aria-live="polite"></span>
-  </div>
+    <p class="collection-label">The collection begins</p>
 
-  <div
-    class="week-tabs"
-    id="week-tabs"
-    role="tablist"
-    aria-label="Weeks with captures"
-  ></div>
-</nav>
-   <div id="collection"></div>
+    <nav
+      class="week-navigation"
+      id="week-navigation"
+      aria-label="Screenshot collection weeks"
+    >
+      <div class="week-nav-heading">
+        <p>Browse the collection</p>
+        <span id="week-status" aria-live="polite"></span>
+      </div>
+
+      <div
+        class="week-tabs"
+        id="week-tabs"
+        role="tablist"
+        aria-label="Weeks with captures"
+      ></div>
+    </nav>
+
+    <div id="collection"></div>
+
+    <section class="enough-pause" aria-label="A moment to pause">
+      <button
+        class="enough-pause__button"
+        id="had-enough-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="enough-message"
+      >Had enough?</button>
+
+      <div
+        class="enough-pause__message"
+        id="enough-message"
+        hidden
+      >
+        <p>You can stop here. You do not have to buy anything, fix anything, or become a better version of yourself today.</p>
+      </div>
+    </section>
   </main>
-<nav
-  class="collection-footer-navigation"
-  aria-label="Return to week navigation"
->
-  <a
-    class="collection-footer-button"
-    href="#week-navigation"
+
+  <nav
+    class="collection-footer-navigation"
+    aria-label="Return to week navigation"
   >
-    <span aria-hidden="true">↑</span>
-    Choose another week
-  </a>
-</nav>
+    <a class="collection-footer-button" href="#week-navigation">
+      <span aria-hidden="true">↑</span>
+      Choose another week
+    </a>
+  </nav>
+
   <footer class="site-footer">
     <p>More, More, More · An evolving twelve-week archive.</p>
   </footer>
+
   <script src="captures.js"></script>
-<script src="render-captures.js"></script>
+  <script src="render-captures.js"></script>
+
   <script>
-  const visionTabs = document.querySelectorAll(".vision-tab");
-  const visionCards = document.querySelectorAll(".vision-card");
+    const visionTabs = document.querySelectorAll(".vision-tab");
+    const visionCards = document.querySelectorAll(".vision-card");
 
-  function activateVisionTab(selectedTab) {
-    const selectedCard = selectedTab.dataset.visionCard;
+    function activateVisionTab(selectedTab) {
+      const selectedCard = selectedTab.dataset.visionCard;
 
-    visionTabs.forEach((tab) => {
-      const isSelected = tab === selectedTab;
+      visionTabs.forEach((tab) => {
+        const isSelected = tab === selectedTab;
 
-      tab.classList.toggle("is-active", isSelected);
-      tab.setAttribute("aria-selected", isSelected);
-    });
-
-    visionCards.forEach((card) => {
-      const isSelected = card.classList.contains(selectedCard);
-
-      card.classList.toggle("is-active", isSelected);
-      card.hidden = !isSelected;
-      card.setAttribute("aria-hidden", !isSelected);
-    });
-  }
-
-  visionTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      activateVisionTab(tab);
-    });
-  });
-
-  const startingTab = document.querySelector(".vision-tab.is-active");
-
-  if (startingTab) {
-    activateVisionTab(startingTab);
-  }
-</script>
-<script>
-  const weekSections = Array.from(
-    document.querySelectorAll(".week")
-  );
-
-  const weekTabsContainer = document.querySelector("#week-tabs");
-  const weekStatus = document.querySelector("#week-status");
-  const weekButtons = [];
-
-  const allCapturesView = document.createElement("section");
-
-  allCapturesView.className = "all-captures-view";
-  allCapturesView.id = "all-captures";
-  allCapturesView.hidden = true;
-  allCapturesView.setAttribute("role", "tabpanel");
-  allCapturesView.setAttribute(
-    "aria-labelledby",
-    "all-captures-tab"
-  );
-
-  allCapturesView.innerHTML = `
-    <div class="all-captures-heading">
-      <p class="week-number">Collection view</p>
-      <h2>All Captures</h2>
-      <p>Choose a screenshot to open its full annotation.</p>
-    </div>
-
-    <div class="all-captures-groups"></div>
-  `;
-
-  if (weekSections.length > 0) {
-    weekSections[0].parentNode.insertBefore(
-      allCapturesView,
-      weekSections[0]
-    );
-  }
-
-  const allCapturesGroups = allCapturesView.querySelector(
-    ".all-captures-groups"
-  );
-
-  const allCapturesButton = document.createElement("button");
-
-  allCapturesButton.type = "button";
-  allCapturesButton.className = "week-tab";
-  allCapturesButton.textContent = "All Captures";
-  allCapturesButton.id = "all-captures-tab";
-
-  allCapturesButton.setAttribute("role", "tab");
-  allCapturesButton.setAttribute("aria-selected", "false");
-  allCapturesButton.setAttribute(
-    "aria-controls",
-    allCapturesView.id
-  );
-
-  weekTabsContainer.appendChild(allCapturesButton);
-
-  function showWeek(selectedIndex) {
-    allCapturesView.hidden = true;
-    allCapturesView.setAttribute("aria-hidden", "true");
-
-    weekSections.forEach((week, index) => {
-      const isSelected = index === selectedIndex;
-
-      week.hidden = !isSelected;
-      week.classList.toggle("is-active", isSelected);
-      week.setAttribute("aria-hidden", !isSelected);
-    });
-
-    weekButtons.forEach((button, index) => {
-      const isSelected = index === selectedIndex;
-
-      button.classList.toggle("is-active", isSelected);
-      button.setAttribute("aria-selected", isSelected);
-    });
-
-    allCapturesButton.classList.remove("is-active");
-    allCapturesButton.setAttribute("aria-selected", "false");
-
-    const selectedWeek = weekSections[selectedIndex];
-    const selectedLabel = selectedWeek
-      .querySelector(".week-number")
-      .textContent.trim();
-
-    weekStatus.textContent = `Showing ${selectedLabel}`;
-  }
-
-  function showAllCaptures() {
-    weekSections.forEach((week) => {
-      week.hidden = true;
-      week.classList.remove("is-active");
-      week.setAttribute("aria-hidden", "true");
-    });
-
-    weekButtons.forEach((button) => {
-      button.classList.remove("is-active");
-      button.setAttribute("aria-selected", "false");
-    });
-
-    allCapturesView.hidden = false;
-    allCapturesView.setAttribute("aria-hidden", "false");
-
-    allCapturesButton.classList.add("is-active");
-    allCapturesButton.setAttribute("aria-selected", "true");
-
-    weekStatus.textContent = "Showing all captures";
-  }
-
-  weekSections.forEach((week, weekIndex) => {
-    const weekLabel =
-      week.querySelector(".week-number")?.textContent.trim() ||
-      `Week ${weekIndex + 1}`;
-
-    const weekHeading =
-      week.querySelector(".week-heading h2")?.textContent.trim() ||
-      `Week ${weekIndex + 1}`;
-
-    const weekButton = document.createElement("button");
-
-    weekButton.type = "button";
-    weekButton.className = "week-tab";
-    weekButton.textContent = weekLabel;
-    weekButton.id = `week-tab-${weekIndex + 1}`;
-
-    weekButton.setAttribute("role", "tab");
-    weekButton.setAttribute("aria-selected", "false");
-    weekButton.setAttribute("aria-controls", week.id);
-
-    week.setAttribute("role", "tabpanel");
-    week.setAttribute("aria-labelledby", weekButton.id);
-
-    weekButton.addEventListener("click", () => {
-      showWeek(weekIndex);
-    });
-
-    weekButtons.push(weekButton);
-    weekTabsContainer.appendChild(weekButton);
-
-    const weekGroup = document.createElement("section");
-
-    weekGroup.className = "all-captures-week";
-
-    const groupHeading = document.createElement("header");
-
-    groupHeading.className = "all-captures-week-heading";
-
-    const groupLabel = document.createElement("p");
-
-    groupLabel.className = "week-number";
-    groupLabel.textContent = weekLabel;
-
-    const groupTitle = document.createElement("h3");
-
-    groupTitle.id = `all-captures-week-${weekIndex + 1}`;
-    groupTitle.textContent = weekHeading;
-
-    weekGroup.setAttribute(
-      "aria-labelledby",
-      groupTitle.id
-    );
-
-    groupHeading.appendChild(groupLabel);
-    groupHeading.appendChild(groupTitle);
-
-    const weekGrid = document.createElement("div");
-
-    weekGrid.className = "all-captures-grid";
-
-    weekGroup.appendChild(groupHeading);
-    weekGroup.appendChild(weekGrid);
-    allCapturesGroups.appendChild(weekGroup);
-
-    const weekImages = Array.from(week.querySelectorAll("img"));
-
-    weekImages.forEach((image, captureIndex) => {
-      const capture =
-        image.closest(".capture") ||
-        image.closest("article");
-
-      const captureTitle =
-        capture?.querySelector("h3")?.textContent.trim() ||
-        `Capture ${captureIndex + 1}`;
-
-      const thumbnailButton =
-        document.createElement("button");
-
-      thumbnailButton.type = "button";
-      thumbnailButton.className = "capture-thumbnail";
-      thumbnailButton.setAttribute(
-        "aria-label",
-        `Open ${captureTitle} from ${weekLabel}`
-      );
-
-      const thumbnailImage = image.cloneNode(false);
-
-      thumbnailImage.className = "capture-thumbnail-image";
-      thumbnailImage.alt = "";
-      thumbnailImage.loading = "lazy";
-
-      const thumbnailLabel = document.createElement("span");
-
-      thumbnailLabel.className = "capture-thumbnail-label";
-      thumbnailLabel.textContent = captureTitle;
-
-      thumbnailButton.appendChild(thumbnailImage);
-      thumbnailButton.appendChild(thumbnailLabel);
-
-      thumbnailButton.addEventListener("click", () => {
-        showWeek(weekIndex);
-
-        window.setTimeout(() => {
-          image.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-          });
-        }, 0);
+        tab.classList.toggle("is-active", isSelected);
+        tab.setAttribute("aria-selected", isSelected);
       });
 
-      weekGrid.appendChild(thumbnailButton);
+      visionCards.forEach((card) => {
+        const isSelected = card.classList.contains(selectedCard);
+
+        card.classList.toggle("is-active", isSelected);
+        card.hidden = !isSelected;
+        card.setAttribute("aria-hidden", !isSelected);
+      });
+    }
+
+    visionTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activateVisionTab(tab);
+      });
     });
-  });
 
-  allCapturesButton.addEventListener("click", () => {
-    showAllCaptures();
-  });
+    const startingTab = document.querySelector(".vision-tab.is-active");
 
-  if (weekSections.length > 0) {
-    showWeek(0);
-  }
-</script>
-  }
-</script>
+    if (startingTab) {
+      activateVisionTab(startingTab);
+    }
+  </script>
+
+  <script>
+    const weekSections = Array.from(
+      document.querySelectorAll(".week")
+    );
+
+    const weekTabsContainer = document.querySelector("#week-tabs");
+    const weekStatus = document.querySelector("#week-status");
+    const weekButtons = [];
+
+    const allCapturesView = document.createElement("section");
+
+    allCapturesView.className = "all-captures-view";
+    allCapturesView.id = "all-captures";
+    allCapturesView.hidden = true;
+    allCapturesView.setAttribute("role", "tabpanel");
+    allCapturesView.setAttribute(
+      "aria-labelledby",
+      "all-captures-tab"
+    );
+
+    allCapturesView.innerHTML = `
+      <div class="all-captures-heading">
+        <p class="week-number">Collection view</p>
+        <h2>All Captures</h2>
+        <p>Choose a screenshot to open its full annotation.</p>
+      </div>
+
+      <div class="all-captures-groups"></div>
+    `;
+
+    if (weekSections.length > 0) {
+      weekSections[0].parentNode.insertBefore(
+        allCapturesView,
+        weekSections[0]
+      );
+    }
+
+    const allCapturesGroups = allCapturesView.querySelector(
+      ".all-captures-groups"
+    );
+
+    const allCapturesButton = document.createElement("button");
+
+    allCapturesButton.type = "button";
+    allCapturesButton.className = "week-tab";
+    allCapturesButton.textContent = "All Captures";
+    allCapturesButton.id = "all-captures-tab";
+
+    allCapturesButton.setAttribute("role", "tab");
+    allCapturesButton.setAttribute("aria-selected", "false");
+    allCapturesButton.setAttribute(
+      "aria-controls",
+      allCapturesView.id
+    );
+
+    weekTabsContainer.appendChild(allCapturesButton);
+
+    function showWeek(selectedIndex) {
+      allCapturesView.hidden = true;
+      allCapturesView.setAttribute("aria-hidden", "true");
+
+      weekSections.forEach((week, index) => {
+        const isSelected = index === selectedIndex;
+
+        week.hidden = !isSelected;
+        week.classList.toggle("is-active", isSelected);
+        week.setAttribute("aria-hidden", !isSelected);
+      });
+
+      weekButtons.forEach((button, index) => {
+        const isSelected = index === selectedIndex;
+
+        button.classList.toggle("is-active", isSelected);
+        button.setAttribute("aria-selected", isSelected);
+      });
+
+      allCapturesButton.classList.remove("is-active");
+      allCapturesButton.setAttribute("aria-selected", "false");
+
+      const selectedWeek = weekSections[selectedIndex];
+      const selectedLabel = selectedWeek
+        .querySelector(".week-number")
+        .textContent.trim();
+
+      weekStatus.textContent = `Showing ${selectedLabel}`;
+    }
+
+    function showAllCaptures() {
+      weekSections.forEach((week) => {
+        week.hidden = true;
+        week.classList.remove("is-active");
+        week.setAttribute("aria-hidden", "true");
+      });
+
+      weekButtons.forEach((button) => {
+        button.classList.remove("is-active");
+        button.setAttribute("aria-selected", "false");
+      });
+
+      allCapturesView.hidden = false;
+      allCapturesView.setAttribute("aria-hidden", "false");
+
+      allCapturesButton.classList.add("is-active");
+      allCapturesButton.setAttribute("aria-selected", "true");
+
+      weekStatus.textContent = "Showing all captures";
+    }
+
+    weekSections.forEach((week, weekIndex) => {
+      const weekLabel =
+        week.querySelector(".week-number")?.textContent.trim() ||
+        `Week ${weekIndex + 1}`;
+
+      const weekHeading =
+        week.querySelector(".week-heading h2")?.textContent.trim() ||
+        `Week ${weekIndex + 1}`;
+
+      const weekButton = document.createElement("button");
+
+      weekButton.type = "button";
+      weekButton.className = "week-tab";
+      weekButton.textContent = weekLabel;
+      weekButton.id = `week-tab-${weekIndex + 1}`;
+
+      weekButton.setAttribute("role", "tab");
+      weekButton.setAttribute("aria-selected", "false");
+      weekButton.setAttribute("aria-controls", week.id);
+
+      week.setAttribute("role", "tabpanel");
+      week.setAttribute("aria-labelledby", weekButton.id);
+
+      weekButton.addEventListener("click", () => {
+        showWeek(weekIndex);
+      });
+
+      weekButtons.push(weekButton);
+      weekTabsContainer.appendChild(weekButton);
+
+      const weekGroup = document.createElement("section");
+      weekGroup.className = "all-captures-week";
+
+      const groupHeading = document.createElement("header");
+      groupHeading.className = "all-captures-week-heading";
+
+      const groupLabel = document.createElement("p");
+      groupLabel.className = "week-number";
+      groupLabel.textContent = weekLabel;
+
+      const groupTitle = document.createElement("h3");
+      groupTitle.id = `all-captures-week-${weekIndex + 1}`;
+      groupTitle.textContent = weekHeading;
+
+      weekGroup.setAttribute(
+        "aria-labelledby",
+        groupTitle.id
+      );
+
+      groupHeading.appendChild(groupLabel);
+      groupHeading.appendChild(groupTitle);
+
+      const weekGrid = document.createElement("div");
+      weekGrid.className = "all-captures-grid";
+
+      weekGroup.appendChild(groupHeading);
+      weekGroup.appendChild(weekGrid);
+      allCapturesGroups.appendChild(weekGroup);
+
+      const weekImages = Array.from(week.querySelectorAll("img"));
+
+      weekImages.forEach((image, captureIndex) => {
+        const capture =
+          image.closest(".capture") ||
+          image.closest("article");
+
+        const captureTitle =
+          capture?.querySelector("h3")?.textContent.trim() ||
+          `Capture ${captureIndex + 1}`;
+
+        const thumbnailButton = document.createElement("button");
+
+        thumbnailButton.type = "button";
+        thumbnailButton.className = "capture-thumbnail";
+        thumbnailButton.setAttribute(
+          "aria-label",
+          `Open ${captureTitle} from ${weekLabel}`
+        );
+
+        const thumbnailImage = image.cloneNode(false);
+
+        thumbnailImage.className = "capture-thumbnail-image";
+        thumbnailImage.alt = "";
+        thumbnailImage.loading = "lazy";
+
+        const thumbnailLabel = document.createElement("span");
+
+        thumbnailLabel.className = "capture-thumbnail-label";
+        thumbnailLabel.textContent = captureTitle;
+
+        thumbnailButton.appendChild(thumbnailImage);
+        thumbnailButton.appendChild(thumbnailLabel);
+
+        thumbnailButton.addEventListener("click", () => {
+          showWeek(weekIndex);
+
+          window.setTimeout(() => {
+            image.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          }, 0);
+        });
+
+        weekGrid.appendChild(thumbnailButton);
+      });
+    });
+
+    allCapturesButton.addEventListener("click", () => {
+      showAllCaptures();
+    });
+
+    if (weekSections.length > 0) {
+      showWeek(0);
+    }
+  </script>
+
+  <script>
+    (() => {
+      const button = document.querySelector("#had-enough-button");
+      const message = document.querySelector("#enough-message");
+
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!expanded));
+        message.hidden = expanded;
+      });
+    })();
+  </script>
 </body>
 </html>
