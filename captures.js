@@ -336,3 +336,117 @@ window.collectionData = [
     ]
   }
 ];
+(() => {
+  const weekFive = {
+    week: 5,
+    heading: "Who Gets to Decide?",
+
+    captures: [
+      {
+        number: 1,
+        title: "Are We Allowed to Keep It?",
+        platform: "TikTok",
+        account: "baby manatees",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/24188c6a-3ce2-4834-887f-02b407438cf7.jpg",
+        alt: "TikTok post listing fashion trends and asking whether people will continue using the items now that they are no longer trending, with a caption distinguishing an original designer bag from its dupes.",
+        remark: "What bothers me is both the pressure to keep replacing things and the judgment toward people who followed the trend in the first place. We are encouraged to buy these clothes and accessories, then questioned for owning them once everyone has moved on. I agree with the reminder to keep using what we already have, but the wording also feels like another opportunity to shame people. Even the caption makes an exception for the expensive original bag while blaming dupes for making it a trend. Apparently, there are rules about buying things, keeping them, and which version you were supposed to afford. Why does enjoying what we own need anyone else’s approval?"
+      },
+      {
+        number: 2,
+        title: "A Way of Life, Now Casting",
+        platform: "Instagram",
+        account: "@thenextcontestants",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/image(20261011-033847).png",
+        alt: "Instagram Story advertisement for The Amish Experience, a reality show, contrasting phone notifications with an outdoor gathering and displaying the phrases No scrolling, No streaming, No shortcuts, and Apply now.",
+        remark: "What bothers me is seeing an entire culture packaged as an experience for reality television contestants. “No scrolling. No streaming. No shortcuts.” reduces a community’s way of life to a challenge for people who can eventually go home. Where are the beliefs, the people, and the reasons behind those choices? The advertisement makes abandoning technology look meaningful while using Instagram to recruit people for television. The imagery also looks AI generated to me, which makes me wonder how the people being represented would feel about it. Their relationship with technology becomes material for another piece of technological entertainment. Even stepping away from constant consumption apparently needs to become something we can watch."
+      },
+      {
+        number: 3,
+        title: "Even Showering Needs an Aesthetic",
+        platform: "",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/image(20261011-033854).png",
+        alt: "Screenshot showing someone rubbing flowers and greenery against a wet hand beneath text saying they stopped buying loofahs and started showering with the garden.",
+        remark: "Apparently, even taking a shower needs to prove how natural and effortless we are. Replacing a loofah with a handful of flowers feels absurd to me, especially when the routine is being filmed and presented as something worth copying. There is a lot of effort going into showing us how little effort this supposedly takes. The flowers make a pretty image, but the post gives me no reason to believe they work as a replacement. Looking connected to nature becomes its own kind of status, and an ordinary shower becomes another opportunity to perform a lifestyle. I find it misleading to present an appealing image as though it demonstrates a useful idea."
+      },
+      {
+        number: 4,
+        title: "Who Was the Bob For?",
+        platform: "Twitter/X",
+        account: "@miacockucci",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/image(20261011-033919).png",
+        alt: "Post saying Kylie is Timothée’s type and mocking disappointed commenters by saying nobody told them to get a bob and a tote bag.",
+        remark: "This one honestly did not bother me because I understood the point. No one told anyone to get a bob and a tote bag, and liking a celebrity does not mean we know what kind of person they would date. The post makes me think about how an imagined preference can become an instruction nobody actually gave. We build an idea of what someone would find attractive and then treat their real choices as a contradiction. There is nothing wrong with enjoying that style, but a haircut and an accessory cannot promise someone else’s attention. How much of what we think we are supposed to become comes from expectations we have filled in ourselves?"
+      },
+      {
+        number: 5,
+        title: "Nobody Knows Your Budget",
+        platform: "TikTok",
+        account: "Brett Chody",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/image(20261011-033928).png",
+        alt: "TikTok cake video with comments from a teacher saying she cannot afford the cake, a creator inviting her to message, and another commenter claiming a teacher should be able to afford it while disparaging gas station work.",
+        remark: "We do not know these people or what they can afford. Being a teacher does not tell us someone’s bills, responsibilities, or spending money, and working at a gas station should not be an insult. It is ridiculous to decide that a stranger can afford an $80 cake based on their job. At the same time, I feel uncomfortable with commenting on someone’s account about wanting something you cannot afford if the hope is that they will send you one. We cannot know whether that was her intention here, but the creator’s “Message me!!!” response makes that possibility part of the exchange. A video about cake becomes a conversation about who has money, who deserves help, and what access to someone with more might get us."
+      },
+      {
+        number: 6,
+        title: "Let Kids Be Kids",
+        platform: "Reddit",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/image(20261011-033936).png",
+        alt: "Reddit exchange in which a user saying they are fourteen and have no money is downvoted while other commenters tell them to buy a game and support its developers. The user also explains its price in the Philippines.",
+        remark: "Leave this kid alone. They have already explained that they are fourteen, have no money, and do not want to bother their parents. Why does that become an invitation to lecture them about supporting developers? The work behind a game deserves compensation, but guilting a child does not give them money. Calling it “$30” or pointing out that it goes on sale assumes that everyone has the same idea of affordable. The kid even explains what it costs where they live, and that response gets downvoted too. They keep having to defend a financial situation they cannot control. Let kids want things without turning their inability to buy them into a moral failure."
+      },
+      {
+        number: 7,
+        title: "The Sponsorship They Didn’t Get",
+        platform: "",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-05/image(20261011-033947).png",
+        alt: "Article excerpt headed Attempted Cheez-Its sponsorship describing a band throwing snacks at its audience to attract a sponsorship, then encouraging an insulting chant about the brand after being asked to stop.",
+        remark: "I thought this was funny because sometimes refusing to participate creates its own marketing problem. According to this account, the band wanted a Cheez-Its sponsorship badly enough to make the product part of its live shows. When the company asked them to stop, the audience became part of a very different chant. The brand still got its name repeated, just with a message it presumably would not have chosen. I cannot tell from this screenshot whether that actually hurt sales, but the reversal is amusing. A company can refuse a sponsorship without getting the final say over how people talk about it. Meanwhile, the fans are being invited to follow the band from enthusiasm to rejection."
+      }
+    ]
+  };
+
+  const existingWeekFive = window.collectionData.findIndex(
+    (week) => week.week === 5
+  );
+
+  if (existingWeekFive === -1) {
+    window.collectionData.push(weekFive);
+  } else {
+    window.collectionData[existingWeekFive] = weekFive;
+  }
+
+  const weekOne = window.collectionData.find(
+    (week) => week.week === 1
+  );
+
+  const snoopyCapture = weekOne?.captures.find(
+    (capture) => capture.number === 6
+  );
+
+  const friendObservation =
+    "When I showed this capture to a friend who is a graphic designer, she noticed that the smudging looked like mascara running when someone cries. That comparison made the sadness feel even more visible to me, as though the pressure to apologize, be forgiven, and become pure had left a physical trace.";
+
+  if (
+    snoopyCapture &&
+    !snoopyCapture.remark.includes(friendObservation)
+  ) {
+    snoopyCapture.remark += "\n\n" + friendObservation;
+  }
+})();
