@@ -450,3 +450,22 @@ window.collectionData = [
     snoopyCapture.remark += "\n\n" + friendObservation;
   }
 })();
+(() => {
+  const week = window.collectionData.find(item => item.week === 5);
+  if (!week) return;
+
+  const images = {
+    2: "796f489c-a38d-41a9-be8c-b258a99dffbf.jpg",
+    3: "8934c70a-1d8a-4601-8929-a6c4a2194ff6.jpg",
+    4: "24af7750-35b4-4eda-bdfc-b6c1e6d024f7.jpg",
+    5: "e274cd3e-3f30-425f-888c-d5c9bda95149.jpg",
+    6: "9ff6a5c4-4e68-4d2c-b416-4726a0384bb0.jpg",
+    7: "ad3eb9aa-28a7-4ab4-90e1-551c4f6c2f0c.jpg"
+  };
+
+  week.captures.forEach(capture => {
+    if (images[capture.number]) {
+      capture.image = "images/week-05/" + images[capture.number];
+    }
+  });
+})();
