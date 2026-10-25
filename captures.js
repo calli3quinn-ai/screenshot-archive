@@ -469,3 +469,98 @@ window.collectionData = [
     }
   });
 })();
+(() => {
+  const weekSix = {
+    week: 6,
+    heading: "Who Gets Our Attention?",
+    captures: [
+      {
+        number: 1,
+        title: "Even the Birthday Cake",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/0d5d615b-34d6-484a-bce9-4d84c9439a69.jpg",
+        alt: "Birthday cake decorated with national flags beneath text saying it represents oppressed countries, followed by comments calling the gesture performative.",
+        remark: "Apparently, even a birthday cake needs to announce how much we care. To me, turning oppressed countries into a party theme feels deeply performative, especially when it is posted as something people should admire. What is the cake actually doing for the people it supposedly represents? I cannot know what she does outside this video, but the post presents the display itself as an accomplishment. It feels like another expectation to do more and publicly prove that we are aware, while offering very little indication of what that awareness accomplishes. The comments call out that contradiction, although joking about the “most oppressed slice” also turns suffering into entertainment. Everyone has something to say, but I am left wondering who any of this helps."
+      },
+      {
+        number: 2,
+        title: "I’d Leave Him for You",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/87cb7990-e229-4ecc-9d52-e808cc9c9013.jpg",
+        alt: "Reposted comment exchange in which someone says she would leave her boyfriend for a creator, who replies that he would never be with someone like her.",
+        remark: "My first reaction was that he did not need to be mean to her. Then I thought about what she had actually said. We have become far too comfortable disrespecting people and their relationships for attention online. “I’d leave my boyfriend for you” is supposed to flatter a stranger, but where does that leave the person she is already with? Even as a joke, it makes her relationship disposable for the possibility of being noticed by someone else. He is allowed to say he is not interested in someone who would do that. The thousands of replies turn the rejection into a public spectacle, which makes me uncomfortable too. What interests me is the assumption that wanting someone supposedly more desirable should be received as a compliment, regardless of who gets disrespected along the way."
+      },
+      {
+        number: 3,
+        title: "A Quick Scroll, in Crayon",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/5bdee4be-6604-4ab0-b993-1d5c3017de82.jpg",
+        alt: "Social media harm legal advertisement with a colorful hand-drawn person holding a phone, labels naming mental health conditions, and a button saying Check your eligibility.",
+        remark: "The hand-drawn style immediately reminds me of childhood. It is colorful, playful, and almost looks like something someone might doodle in a notebook. Then I read the words around it: severe anxiety, severe depression, eating disorder, body dysmorphia. The contrast feels unsettling because the image makes something serious look approachable and almost fun. I appreciate that it acknowledges how harmful social media can become, but it is also an advertisement asking me to take another action while I am scrolling. Even the harm associated with being online becomes part of the content competing for our attention. The childhood style especially stands out beside “must be 25 or younger.” It makes me think about how young people are when this pressure starts, long before they necessarily understand what it is doing to them."
+      },
+      {
+        number: 4,
+        title: "Born to Subscribe",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/ca69d848-8f3c-42ac-a38a-fd724f2dc76e.jpg",
+        alt: "Reposted YouTube comment asking Why was I born, with a creator replying to like subscribe and hit that bell.",
+        remark: "I know this is a joke, but it captures something that feels very real to me. Sometimes it feels like we exist to do whatever social media and video creators ask of us: watch, like, subscribe, share, and come back for more. Even a question about why we exist gets answered with instructions for increasing someone’s engagement. It makes me think about how early that relationship can begin, with children being handed iPads before they can understand the demands built into what they are watching. There is always another video and another request for attention. The reply is funny because it is absurd, but it also makes me wonder how much of our time we have come to accept as belonging to someone else."
+      },
+      {
+        number: 5,
+        title: "More Than a Steak?",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/d649db47-4cca-48ca-94e4-b5f06b766a80.jpg",
+        alt: "Video captioned My Teenager Spends All His Money On Steak, with comments urging his parent to check whether he watches red pill content.",
+        remark: "What bothered me was that I understood why the comments were concerned. I associate this kind of steak-and-eggs content with men online who promote a particular version of masculinity while speaking terribly about women. Seeing a young teenager potentially picking up those habits is scary to me. His dinner cannot tell us what he believes or whose videos he watches, but it raises a question about what else might come with the lifestyle being sold. Advice about what to eat or how to become stronger can also carry instructions about who to be and how to treat other people. I hope the concern leads to a conversation with him, because the possibility of a child absorbing those messages deserves more care than a comment section can provide."
+      },
+      {
+        number: 6,
+        title: "Fame Is Not Permission",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/560d299c-0b4a-497c-a126-8edef82461e2.jpg",
+        alt: "Post identifying a photographed person as Phoebe Bridgers and saying the photographer did not think she would notice, with comments from her account objecting to the photo and its publication.",
+        remark: "I feel horrible for her, and I am glad she spoke up. The person posting this acknowledges that they did not think she would notice the picture being taken, which makes it even more uncomfortable to me. Why does recognizing someone famous make us feel entitled to capture them in a vulnerable moment and share it with everyone? We are so invested in celebrity lives that seeing someone in person apparently needs to become proof we can post. Her response reminds the audience that the person in the photograph has feelings about being turned into content. There is always a demand to see more of celebrities, even when they are simply trying to exist outside their work. Being interested in someone does not mean we are owed access to every part of their life."
+      },
+      {
+        number: 7,
+        title: "Who Has to Stop Posting?",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+        image: "images/week-06/4f3ecd10-8476-48d9-b07a-811dca478fb9.jpg",
+        alt: "Comments on a post discussing Olivia Rodrigo, with one commenter invoking Cornell and gas prices and another replying that the creator is not part of the government.",
+        remark: "I understand the frustration behind the comment. There are incredibly serious things happening in the world that deserve our attention. But people are also allowed to talk about their favorite artists without proving that they have addressed every crisis first. Why does this creator need to stop posting her content because lawmakers or university officials have urgent responsibilities? Those are the people with the authority to act, and they should be held accountable for what they do. A post about Olivia Rodrigo does not tell us everything its creator knows, cares about, or does outside that moment. The reply pointing out that she is not part of the government gets at what bothers me: the expectation to do more keeps landing on whoever happens to be visible. Caring about serious issues should leave room for ordinary interests, too."
+      }
+    ]
+  };
+
+  const existingIndex = window.collectionData.findIndex(
+    item => Number(item.week) === 6
+  );
+
+  if (existingIndex === -1) {
+    window.collectionData.push(weekSix);
+  } else {
+    window.collectionData[existingIndex] = weekSix;
+  }
+})();
