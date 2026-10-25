@@ -688,150 +688,23 @@
       });
     })();
   </script>
-  <style>
-  #enough-studio {
-    box-sizing: border-box;
-    width: calc(100% - 2rem);
-    max-width: 68rem;
-    margin: 3rem auto;
-    padding: clamp(1.25rem, 4vw, 3rem);
-    border: 2px solid #21314b;
-    border-radius: 1.5rem;
-    background: #fff8ed;
-    color: #21314b;
-  }
-
-  #enough-studio h2 {
-    margin: 0.5rem 0 1rem;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1.1;
-  }
-
-  #enough-studio p {
-    line-height: 1.7;
-  }
-
-  #enough-studio .studio-label {
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  #enough-studio .studio-pair {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-
-  #enough-studio figure {
-    min-width: 0;
-    margin: 0;
-  }
-
-  #enough-studio img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 36rem;
-    object-fit: contain;
-    border-radius: 0.75rem;
-    background: #fff;
-  }
-
-  #enough-studio figcaption {
-    margin-top: 0.75rem;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-
-  #enough-studio .studio-question {
-    margin: 1.5rem 0 0;
-    padding: 1.25rem;
-    border-radius: 1rem;
-    background: #efb8c8;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  @media (max-width: 640px) {
-    #enough-studio .studio-pair {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-
-<script>
+ <script>
   (() => {
-    const data = window.collectionData || [];
-    const getCapture = (week, number) =>
-      data.find(item => Number(item.week) === week)
-        ?.captures.find(item => Number(item.number) === number);
-
-    const closet = getCapture(1, 1);
-    const trends = getCapture(5, 1);
     const anchor = document.querySelector(".collection-label");
+    if (!anchor) return;
 
-    if (!closet || !trends || !anchor) return;
-    if (document.getElementById("enough-studio")) return;
+    const paragraph = document.createElement("p");
+    paragraph.style.cssText =
+      "margin:1rem auto;text-align:center;padding:0 1rem;";
 
-    const section = document.createElement("section");
-    section.id = "enough-studio";
-    section.setAttribute("aria-labelledby", "enough-studio-title");
+    const link = document.createElement("a");
+    link.href = "when-is-it-enough.html";
+    link.textContent = "When Is It Enough? →";
+    link.style.cssText =
+      "color:#21314b;font-weight:700;text-underline-offset:4px;";
 
-    section.innerHTML = `
-      <p class="studio-label">Two captures, weeks apart</p>
-      <h2 id="enough-studio-title">When Is It Enough?</h2>
-      <p>
-        First, we are told to buy it. Then we are asked why we
-        still have it.
-      </p>
-
-      <div class="studio-pair"></div>
-
-      <p>
-        The closet is already overflowing, and there is still
-        something else to want. Weeks later, another post asks
-        whether people will keep wearing things now that their
-        trends have passed. I agree with using what we already
-        own, but I also notice how quickly buying something
-        becomes another reason to judge someone.
-      </p>
-      <p>
-        Together, these captures make me wonder when the task is
-        ever finished. We are expected to know what to buy, which
-        version to buy, and when to stop wanting it. Even keeping
-        something we like becomes a choice we have to explain.
-        Why does enjoying what we own need anyone else's approval?
-      </p>
-
-      <p class="studio-question">
-        Which of these expectations have you caught yourself
-        treating as your own?
-      </p>
-    `;
-
-    const pair = section.querySelector(".studio-pair");
-
-    [
-      { capture: closet, week: 1 },
-      { capture: trends, week: 5 }
-    ].forEach(({ capture, week }) => {
-      const figure = document.createElement("figure");
-      const image = document.createElement("img");
-      const caption = document.createElement("figcaption");
-
-      image.src = capture.image;
-      image.alt = capture.alt || capture.title;
-      image.loading = "lazy";
-      caption.textContent = `Week ${week} · ${capture.title}`;
-
-      figure.append(image, caption);
-      pair.appendChild(figure);
-    });
-
-    anchor.before(section);
+    paragraph.append(link);
+    anchor.before(paragraph);
   })();
 </script>
 </body>
