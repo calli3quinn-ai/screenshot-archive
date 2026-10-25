@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When Is It Enough? · More, More, More</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff8ed;
+      color: #21314b;
+      font-family: Georgia, serif;
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    a { color: #21314b; }
+
+    a:focus-visible {
+      outline: 3px solid #21314b;
+      outline-offset: 5px;
+    }
+
+    .label {
+      margin-top: 2rem;
+      font: bold 0.8rem Arial, sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.1;
+      margin: 0.75rem 0 1rem;
+    }
+
+    .pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    figure { margin: 0; min-width: 0; }
+
+    figure a { display: block; }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: contain;
+      background: white;
+      border: 1px solid #d9d1c5;
+      border-radius: 0.75rem;
+    }
+
+    figcaption {
+      margin-top: 0.75rem;
+      font-weight: bold;
+    }
+
+    .reflection { max-width: 720px; margin: auto; }
+
+    .question {
+      padding: 1.25rem;
+      background: #efb8c8;
+      border-radius: 1rem;
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .pair { grid-template-columns: 1fr; }
+      img { height: auto; max-height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="index.html#week-navigation">← Back to the archive</a>
+
+    <p class="label">More, More, More · Two captures, weeks apart</p>
+    <h1>When Is It Enough?</h1>
+    <p>
+      First, we are told to buy it. Then we are asked why we
+      still have it.
+    </p>
+
+    <div class="pair" id="studio-pair"></div>
+    <p><small>Select either image to view it full size.</small></p>
+
+    <div class="reflection">
+      <p>
+        The closet is already overflowing, and there is still
+        something else to want. Weeks later, another post asks
+        whether people will keep wearing things now that their
+        trends have passed. I agree with using what we already
+        own, but I also notice how quickly buying something
+        becomes another reason to judge someone.
+      </p>
+
+      <p>
+        Together, these captures make me wonder when the task is
+        ever finished. We are expected to know what to buy, which
+        version to buy, and when to stop wanting it. Even keeping
+        something we like becomes a choice we have to explain.
+        Why does enjoying what we own need anyone else's approval?
+      </p>
+
+      <p class="question">
+        Which of these expectations have you caught yourself
+        treating as your own?
+      </p>
+
+      <a href="index.html#week-navigation">← Back to the archive</a>
+    </div>
+  </main>
+
+  <script src="captures.js"></script>
+  <script>
+    (() => {
+      const data = window.collectionData || [];
+      const pair = document.getElementById("studio-pair");
+
+      [1, 5].forEach(week => {
+        const capture = data
+          .find(item => Number(item.week) === week)
+          ?.captures.find(item => Number(item.number) === 1);
+
+        if (!capture) return;
+
+        const figure = document.createElement("figure");
+        const link = document.createElement("a");
+        const image = document.createElement("img");
+        const caption = document.createElement("figcaption");
+
+        link.href = capture.image;
+        link.setAttribute(
+          "aria-label",
+          `View ${capture.title} full size`
+        );
+        image.src = capture.image;
+        image.alt = capture.alt || capture.title;
+        caption.textContent = `Week ${week} · ${capture.title}`;
+
+        link.append(image);
+        figure.append(link, caption);
+        pair.append(figure);
+      });
+    })();
+  </script>
+</body>
+</html>
