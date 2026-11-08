@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A stopping point for More, More, More, a collection by Callie Quinn.">
+  <meta name="color-scheme" content="light">
+  <title>Enough. · More, More, More</title>
+  <style>
+    :root { --paper:#fff8ed; --ink:#21314b; --pink:#efb8c8; --olive:#59664c; }
+    * { box-sizing:border-box; }
+    html { background:var(--paper); }
+    body { margin:0; color:var(--ink); font-family:Georgia,"Times New Roman",serif; }
+    .page { min-height:100vh; min-height:100svh; display:flex; flex-direction:column; padding:clamp(1.4rem,4vw,3rem); }
+    header { font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:.8rem; font-weight:650; letter-spacing:.12em; text-transform:uppercase; }
+    main { width:100%; max-width:43rem; margin:auto; padding:clamp(2.5rem,7vh,5.5rem) 0; text-align:center; }
+    .overline { margin:0 0 1.5rem; color:var(--olive); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; }
+    h1 { position:relative; z-index:0; width:fit-content; margin:0 auto 2.25rem; font-size:clamp(4.3rem,13vw,8rem); font-weight:400; line-height:1.03; letter-spacing:-.055em; }
+    h1::after { content:""; position:absolute; z-index:-1; left:2%; right:-2%; bottom:.015em; height:.2em; border-radius:60% 40% 45% 55%; background:var(--pink); transform:rotate(-2deg); }
+    .permission { max-width:35rem; margin:0 auto; font-size:clamp(1.25rem,2.3vw,1.6rem); line-height:1.55; }
+    .divider { width:2.5rem; height:1px; margin:2.2rem auto; background:var(--olive); }
+    .invitation { max-width:32rem; margin:0 auto; font-size:clamp(1.05rem,1.8vw,1.2rem); line-height:1.75; }
+    .no-post { margin:1.3rem 0 0; }
+    .ending { margin:2.6rem 0 0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:.95rem; font-weight:650; line-height:1.6; }
+    footer { text-align:center; color:var(--olive); font-size:.95rem; line-height:1.6; }
+    footer p { margin:0; }
+    .signature { color:var(--ink); font-size:1.4rem; font-style:italic; }
+    @media (max-width:480px) {
+      main { padding:2.75rem 0; }
+      h1 { margin-bottom:1.75rem; }
+      .divider { margin:1.75rem auto; }
+      .ending { margin-top:2rem; }
+    }
+    @media print { .page { min-height:0; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>More, More, More</header>
+    <main aria-labelledby="ending-title">
+      <p class="overline">The end, for now.</p>
+      <h1 id="ending-title">Enough.</h1>
+      <p class="permission">You can stop here. You do not have to buy anything, fix anything, or become a better version of yourself today.</p>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="invitation">
+        <p>Maybe there is a song you want to listen to, someone you want to talk to, or a view worth looking at for a minute.</p>
+        <p class="no-post">Whatever you choose, it does not have to become content.</p>
+      </div>
+      <p class="ending">Close this tab whenever you’re ready.</p>
+    </main>
+    <footer>
+      <p>Thanks for being here.</p>
+      <p class="signature">Callie</p>
+    </footer>
+  </div>
+</body>
+</html>
+
