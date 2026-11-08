@@ -707,5 +707,21 @@
     anchor.before(paragraph);
   })();
 </script>
+  <script>
+  (() => {
+    const button = document.getElementById("had-enough-button");
+    if (!button) return;
+
+    const exit = document.createElement("a");
+    exit.id = button.id;
+    exit.className = button.className;
+    exit.href = "enough.html";
+    exit.textContent = "Had enough?";
+    exit.style.textDecoration = "none";
+
+    button.replaceWith(exit);
+    document.getElementById("enough-message")?.remove();
+  })();
+</script>
 </body>
 </html>
