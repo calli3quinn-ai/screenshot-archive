@@ -579,7 +579,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/920c733d-65e7-4e37-8bbf-d8af6cc61f90(1).jpg",
+        image: "images/week-07/920c733d-65e7-4e37-8bbf-d8af6cc61f90",
 
         alt: "Twitter/X screenshot quoting a Threads post about a father making Halloween candy pancakes, with users accusing the poster of reusing the image and inventing the story.",
 
@@ -594,7 +594,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/3e7f4214-3172-43df-b75d-b006aecc736e(1).jpg",
+        image: "images/week-07/3e7f4214-3172-43df-b75d-b006aecc736e",
 
         alt: "TikTok screenshot showing a Brandy Melville shirt reading NO CAL and comments debating whether someone should buy it because her ex is named Cal.",
 
@@ -609,7 +609,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/ad2da3fe-dcd6-43b8-8dc5-a2fed3017938(1).jpg",
+        image: "images/week-07/ad2da3fe-dcd6-43b8-8dc5-a2fed3017938",
 
         alt: "Twitter/X screenshot of one user spiraling about life being irreversible and another replying that she will be okay.",
 
@@ -624,7 +624,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/4cd33b0e-69ed-4152-b49e-ad9fffa09870(1).jpg",
+        image: "images/week-07/4cd33b0e-69ed-4152-b49e-ad9fffa09870,
 
         alt: "Instagram Reel showing someone typing instructions telling ChatGPT to stop speaking like a close friend and become more professional.",
 
@@ -639,7 +639,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/380eb5f8-dec1-4515-a13a-a0dfad62fe21(1).jpg",
+        image: "images/week-07/380eb5f8-dec1-4515-a13a-a0dfad62fe21",
 
         alt: "Instagram attorney advertisement saying social media companies knew how apps affected children and inviting users treated for depression, anxiety, or an eating disorder to learn more.",
 
@@ -654,7 +654,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/ea532af5-f688-45fa-8313-d12494c787d7(1).jpg",
+        image: "images/week-07/ea532af5-f688-45fa-8313-d12494c787d7",
 
         alt: "Twitter/X screenshot describing a Clancy test teenage boys use to disqualify girls who support her, with a reply reframing the test around marriage and postpartum behavior.",
 
@@ -669,7 +669,7 @@ window.collectionData = [
         captureDate: "",
         sourceUrl: "",
 
-        image: "images/week-07/2325895a-deeb-409c-9961-46797606f27a(1).jpg",
+        image: "images/week-07/2325895a-deeb-409c-9961-46797606f27a",
 
         alt: "Twitter/X post criticizing Suki Waterhouse as a pick-me quirky girl while praising Robert Pattinson for simply existing.",
 
