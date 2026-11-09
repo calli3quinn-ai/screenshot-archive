@@ -564,3 +564,127 @@ window.collectionData = [
     window.collectionData[existingIndex] = weekSix;
   }
 })();
+
+(() => {
+  const weekSeven = {
+    week: 7,
+    heading: "Performance, Judgment, and Belief",
+
+    captures: [
+      {
+        number: 1,
+        title: "The Screenshot Cannot Tell You",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/920c733d-65e7-4e37-8bbf-d8af6cc61f90(1).jpg",
+
+        alt: "Twitter/X screenshot quoting a Threads post about a father making Halloween candy pancakes, with users accusing the poster of reusing the image and inventing the story.",
+
+        remark: "At first, this looks like strangers being needlessly cynical about a dad making Halloween pancakes for his children. What the screenshot cannot show is that the pancake photo has been reused several times over the past year, meaning the story is a lie. That makes the replies calling him out justified, but only to people who already know the history. Without that context, the callout looks cruel and the lie looks sincere. Social media asks us to decide who deserves our belief using fragments, while the information that changes the entire story often remains invisible."
+      },
+
+      {
+        number: 2,
+        title: "Is Being Over Him Enough?",
+        platform: "TikTok",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/3e7f4214-3172-43df-b75d-b006aecc736e(1).jpg",
+
+        alt: "TikTok screenshot showing a Brandy Melville shirt reading NO CAL and comments debating whether someone should buy it because her ex is named Cal.",
+
+        remark: "The response is nasty, and honestly I think both people are being a little weird, but I liked that it gave the original commenter something to critically think about. Her breakup immediately becomes a reason to buy a shirt and publicly perform how over her ex she is. The reply asks whether moving on needs to become something she consumes and displays, or whether privately being over him can simply be enough. Not every feeling needs proof, a product, or an audience."
+      },
+
+      {
+        number: 3,
+        title: "Dramatic, But Not Alone",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/ad2da3fe-dcd6-43b8-8dc5-a2fed3017938(1).jpg",
+
+        alt: "Twitter/X screenshot of one user spiraling about life being irreversible and another replying that she will be okay.",
+
+        remark: "I liked that these were originally unrelated posts but became connected through the reply. The internet constantly asks for more from us, including every passing thought, fear, and spiral, while somehow still making us feel completely alone. The response is blunt, but it interrupts that loneliness by showing that someone else recognizes the feeling. We can relate to one another even when we do not realize it until someone answers back."
+      },
+
+      {
+        number: 4,
+        title: "You’re Still Using It",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/4cd33b0e-69ed-4152-b49e-ad9fffa09870(1).jpg",
+
+        alt: "Instagram Reel showing someone typing instructions telling ChatGPT to stop speaking like a close friend and become more professional.",
+
+        remark: "Posting this feels like an attempt to claim some moral high ground over AI, even though the person is still actively using it. They criticize ChatGPT for sounding too familiar while publicly displaying their own relationship with it for entertainment. The tone did not appear from nowhere; it developed through how the user interacted with the tool. Scolding it does not separate them from the system or make their use more thoughtful. They are still using AI, and they are still being themselves while doing it."
+      },
+
+      {
+        number: 5,
+        title: "They Knew Where to Advertise",
+        platform: "Instagram",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/380eb5f8-dec1-4515-a13a-a0dfad62fe21(1).jpg",
+
+        alt: "Instagram attorney advertisement saying social media companies knew how apps affected children and inviting users treated for depression, anxiety, or an eating disorder to learn more.",
+
+        remark: "What interested me is that the lawyers knew they could find their target audience on Instagram while using the advertisement to criticize the people who own and built these platforms. The ad’s entire argument is that social media companies knew what their products were doing to children and continued anyway. Now the same platform is being used to reach the adults who may have been harmed by it. Instagram created the problem, kept the audience, and became the place where that audience is offered legal help. They knew, but it worked."
+      },
+
+      {
+        number: 6,
+        title: "A Tragedy Is Not a Test",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/ea532af5-f688-45fa-8313-d12494c787d7(1).jpg",
+
+        alt: "Twitter/X screenshot describing a Clancy test teenage boys use to disqualify girls who support her, with a reply reframing the test around marriage and postpartum behavior.",
+
+        remark: "How did the deaths of children and the horrific experience of an entire family become a dating test? Whatever someone believes about the case, it is a tragedy involving postpartum mental health, marriage, parenthood, and unimaginable loss, not a funny joke teenagers should use to judge girls. What bothered me most was seeing a mother proudly celebrate her son for turning another family’s worst moment into a reason to disqualify young women. An incredibly complicated tragedy has been reduced to a misogynistic loyalty test."
+      },
+
+      {
+        number: 7,
+        title: "He Still Chose Her",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-07/2325895a-deeb-409c-9961-46797606f27a(1).jpg",
+
+        alt: "Twitter/X post criticizing Suki Waterhouse as a pick-me quirky girl while praising Robert Pattinson for simply existing.",
+
+        remark: "Even if Suki Waterhouse intentionally acts quirky online, doing something consistently can simply be part of who she is. The post treats every effort she makes as embarrassing while Robert Pattinson is considered iconic for doing absolutely nothing. That is the same exhausting standard where women are mocked for trying and men are praised for existing. Whatever the poster thinks of her personality, it clearly works for the person whose opinion actually matters: he chose her. You are performing judgment for free on Twitter, and he still does not want you."
+      }
+    ]
+  };
+
+  const existingIndex = window.collectionData.findIndex(
+    item => Number(item.week) === 7
+  );
+
+  if (existingIndex === -1) {
+    window.collectionData.push(weekSeven);
+  } else {
+    window.collectionData[existingIndex] = weekSeven;
+  }
+})();
