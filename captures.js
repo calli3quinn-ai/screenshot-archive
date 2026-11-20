@@ -688,3 +688,127 @@ window.collectionData = [
     window.collectionData[existingIndex] = weekSeven;
   }
 })();
+
+;(() => {
+  const weekEight = {
+    week: 8,
+    heading: "Attention, Effort, and Access",
+
+    captures: [
+      {
+        number: 1,
+        title: "All That’s Left Is Showing Up",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/c093a47b-1527-445e-a90f-6c2c1670a062.jpg",
+
+        alt: "Twitter/X screenshot showing an AI assistant arranging a date, selecting flowers through another AI, and telling the user to act surprised.",
+
+        remark: "“Act surprised” is the part that really gets me. The version of romance being sold here includes flowers, dinner, and knowing what your partner likes, but the attention behind those gestures has been handed off to something else. I understand wanting help making a reservation. Having an AI choose the thoughtful details makes me wonder who is actually doing the caring. “All that’s left is showing up” becomes the selling point, as if putting effort into someone you love was the inconvenience we needed to solve."
+      },
+
+      {
+        number: 2,
+        title: "Who Gets to Judge Grief?",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/670896f9-7e3f-4fe9-a646-90240fa680f4.jpg",
+
+        alt: "Twitter/X post criticizing a TikTok comment about choosing a deceased best friend’s favorite padded bra for her funeral.",
+
+        remark: "There is something uncomfortable about watching strangers decide whether someone’s way of remembering her best friend is acceptable. Choosing something that made her friend feel confident could have been a deeply personal act of care. Sharing that detail publicly also opens an intimate moment to an audience that knows almost nothing about their relationship. Now everyone gets to decide whether it is sweet, inappropriate, or embarrassing. A few sentences become enough for people to judge an entire friendship, while the person who actually experienced the loss becomes another subject for the feed to debate."
+      },
+
+      {
+        number: 3,
+        title: "Wake Up and Buy Something",
+        platform: "TikTok",
+        account: "Np.Miranda",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/29817ee4-cfa5-43d4-9381-f3fd6c76b19f.jpg",
+
+        alt: "TikTok screenshot labeled morning routine as a nurse practitioner at 6 a.m., showing sleep and beauty accessories and a caption directing viewers to an Amazon storefront.",
+
+        remark: "Apparently, even sleeping has become time we are supposed to spend improving ourselves. Before the workday starts, there is already a routine full of products, steps, and things to remember. Calling this a morning routine “as a nurse practitioner” gives it an added sense of authority, while the caption sends viewers directly to an Amazon storefront. Getting ready becomes a shopping list. I find it exhausting that something presented as everyday life can quietly become another set of expectations about how much work we should be doing on ourselves before we even leave the house."
+      },
+
+      {
+        number: 4,
+        title: "Why Were You Surprised?",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/b4a3abba-b977-4092-9d29-64d7ed5253e1.jpg",
+
+        alt: "Twitter/X screenshot of a woman preparing a drink, with commentary expressing surprise that her drinks are generally healthy and use homemade syrups.",
+
+        remark: "The surprise that her drinks are “generally healthy” makes me wonder what people had already decided about her just from looking at her. Even the defense depends on proving that what she makes meets a standard the audience approves of. Homemade syrups apparently earn her permission to enjoy herself. Why does someone making a drink need to pass a nutrition test for strangers? The language about “poison slop” makes the judgment sound like concern, but I keep coming back to how quickly a person’s body can become the evidence people think they need."
+      },
+
+      {
+        number: 5,
+        title: "Your AI Is Already Assumed",
+        platform: "Subway advertisement",
+        account: "You.com",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/4eb38dc4-8d89-41d4-8113-a98600626c7d.jpg",
+
+        alt: "Subway advertisement for You.com reading Your AI shouldn’t send you to a bank that became a bodega in 2023.",
+
+        remark: "“Your AI” is doing a lot of work in this advertisement. It assumes that AI already belongs in your everyday life and that naturally, you should expect a better one. Being sent to the wrong place becomes an opportunity to sell another service. I find it interesting how easily a reason to question our dependence on something gets turned into a reason to keep using it. Even sitting on the subway, we are being taught what to expect from a technology whose place in our lives is treated as already settled."
+      },
+
+      {
+        number: 6,
+        title: "Please Schedule Your Spontaneity",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/6e1ea604-4b1c-4faa-a94c-532ecb5a71c6.jpg",
+
+        alt: "Twitter/X screenshot of a dating conversation in which one person sends a Calendly link to schedule dinner and the other refers an Uber request to an AI agent.",
+
+        remark: "A calendar link for dinner, followed by an AI contact for the ride, makes a date feel like something that needs administrative support. Even if this exchange is a joke, the humor depends on recognizing how easily personal interactions can start resembling work. There is always another link, platform, or task to complete before you actually reach the person. I understand that scheduling can be annoying, but I wonder what happens when avoiding small inconveniences becomes the priority in getting to know someone. At what point does making yourself easier to schedule make you harder to connect with?"
+      },
+
+      {
+        number: 7,
+        title: "A Post Is Not an Invitation",
+        platform: "Twitter/X",
+        account: "",
+        captureDate: "",
+        sourceUrl: "",
+
+        image: "images/week-08/3d02680a-1ffc-467b-b34f-72fcec74aca7.jpg",
+
+        alt: "Twitter/X screenshot criticizing a post that claims to identify a celebrity’s accommodation from a social media photo, alongside a comment about avoiding real-time posting.",
+
+        remark: "The pride in saying “I’ve already found you” is what makes this so unsettling. The post presents finding someone’s accommodation as an achievement for an audience to appreciate. Meanwhile, the response about avoiding real-time posting shows who ends up responsible for managing that behavior. The person sharing a photo has to anticipate what strangers might investigate and decide how much of her life is safe to show. Celebrity culture encourages people to feel close to someone they have never met, and that feeling can become an expectation of access that reaches far beyond anything the person actually chose to share."
+      }
+    ]
+  };
+
+  const existingIndex = window.collectionData.findIndex(
+    (week) => Number(week.week) === 8
+  );
+
+  if (existingIndex === -1) {
+    window.collectionData.push(weekEight);
+  } else {
+    window.collectionData[existingIndex] = weekEight;
+  }
+})();
